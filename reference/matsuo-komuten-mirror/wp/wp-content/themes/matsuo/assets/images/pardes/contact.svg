@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="bg" cx="233" cy="209" r="375" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1f8f99" stop-opacity="0.35"/>
+      <stop offset="45%" stop-color="#131318"/>
+      <stop offset="100%" stop-color="#08080b"/>
+    </radialGradient>
+    <filter id="glow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="500" height="500" fill="url(#bg)"/>
+  <g>
+    <line x1="430.5" y1="187.7" x2="494.0" y2="146.5" stroke="#1f8f99" stroke-width="1" opacity="0.55"/>
+    <line x1="430.5" y1="187.7" x2="330.9" y2="245.7" stroke="#1f8f99" stroke-width="1" opacity="0.55"/>
+    <line x1="149.1" y1="293.8" x2="134.4" y2="324.6" stroke="#1f8f99" stroke-width="1" opacity="0.55"/>
+    <line x1="330.9" y1="245.7" x2="201.3" y2="248.1" stroke="#1f8f99" stroke-width="1" opacity="0.55"/>
+    <line x1="149.1" y1="293.8" x2="201.3" y2="248.1" stroke="#1f8f99" stroke-width="1" opacity="0.55"/>
+    <line x1="296.0" y1="411.2" x2="427.8" y2="418.6" stroke="#1f8f99" stroke-width="1" opacity="0.55"/>
+    <line x1="330.9" y1="245.7" x2="296.0" y2="411.2" stroke="#1f8f99" stroke-width="1" opacity="0.55"/>
+    <line x1="494.0" y1="146.5" x2="493.2" y2="10.0" stroke="#1f8f99" stroke-width="1" opacity="0.55"/>
+    <line x1="430.5" y1="187.7" x2="493.2" y2="10.0" stroke="#1f8f99" stroke-width="1" opacity="0.55"/>
+    <line x1="201.3" y1="248.1" x2="249.9" y2="13.1" stroke="#1f8f99" stroke-width="1" opacity="0.55"/>
+    <line x1="493.2" y1="10.0" x2="249.9" y2="13.1" stroke="#1f8f99" stroke-width="1" opacity="0.55"/>
+    <line x1="330.9" y1="245.7" x2="427.8" y2="418.6" stroke="#1f8f99" stroke-width="1" opacity="0.55"/>
+    <circle cx="430.5" cy="187.7" r="2.1" fill="#45f3ff" filter="url(#glow)" opacity="0.65"/>
+    <circle cx="149.1" cy="293.8" r="2.6" fill="#45f3ff" filter="url(#glow)" opacity="0.71"/>
+    <circle cx="330.9" cy="245.7" r="3.7" fill="#45f3ff" filter="url(#glow)" opacity="0.84"/>
+    <circle cx="201.3" cy="248.1" r="3.6" fill="#45f3ff" filter="url(#glow)" opacity="0.75"/>
+    <circle cx="296.0" cy="411.2" r="4.9" fill="#45f3ff" filter="url(#glow)" opacity="0.63"/>
+    <circle cx="494.0" cy="146.5" r="1.6" fill="#45f3ff" filter="url(#glow)" opacity="0.87"/>
+    <circle cx="493.2" cy="10.0" r="2.3" fill="#45f3ff" filter="url(#glow)" opacity="0.77"/>
+    <circle cx="249.9" cy="13.1" r="2.7" fill="#45f3ff" filter="url(#glow)" opacity="0.87"/>
+    <circle cx="134.4" cy="324.6" r="3.8" fill="#45f3ff" filter="url(#glow)" opacity="0.68"/>
+    <circle cx="427.8" cy="418.6" r="2.8" fill="#45f3ff" filter="url(#glow)" opacity="0.60"/>
+  </g>
+</svg>

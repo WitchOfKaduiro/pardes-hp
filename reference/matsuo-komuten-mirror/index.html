@@ -1,0 +1,2143 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="format-detection" content="telephone=no">
+        <link id="favicon" rel="icon" type="image/png" href="wp/wp-content/themes/matsuo/assets/images/pardes/favicon-32.png">
+        <link rel="preload" as="font" href="wp/wp-content/themes/matsuo/assets/font/ShipporiMincho-OTF-Regular.woff2" type="font/woff2" crossorigin>
+        <style>
+            @font-face {
+                font-family: 'shippori-mincho';
+                src: url(wp/wp-content/themes/matsuo/assets/font/ShipporiMincho-OTF-Regular.woff2) format('woff2'), url(wp/wp-content/themes/matsuo/assets/font/ShipporiMincho-OTF-Regular.woff) format('woff'), url(wp/wp-content/themes/matsuo/assets/font/ShipporiMincho-OTF-Regular.otf) format('opentype');
+                font-display: swap;
+            }
+        </style>
+        <!-- production build -->
+        <script type="module" src="wp/wp-content/themes/matsuo/build/index-CjeI3SAa.js"></script>
+        <script type="module" src="wp/wp-content/themes/matsuo/build/index-UnWD9RoB.js"></script>
+        <link rel="stylesheet" href="wp/wp-content/themes/matsuo/build/index-B4wP8yjM.css"/>
+        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'/>
+        <!-- This site is optimized with the Yoast SEO plugin v26.0 - https://yoast.com/wordpress/plugins/seo/ -->
+        <title>Pardes Inc.（パルデス） | 自由意志を持つAGIの実現へ</title>
+        <meta name="description" content="Pardes Inc.は、誤差逆伝播法を使わない生物学的妥当性の高いニューラルネットワーク「BiNet」を開発するAIスタートアップです。"/>
+        <meta property="og:locale" content="ja_JP"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Pardes Inc.（パルデス） | 自由意志を持つAGIの実現へ"/>
+        <meta property="og:description" content="Pardes Inc.は、誤差逆伝播法を使わない生物学的妥当性の高いニューラルネットワーク「BiNet」を開発するAIスタートアップです。"/>
+        <meta property="og:site_name" content="Pardes Inc."/>
+        <meta property="og:image" content="wp/wp-content/themes/matsuo/assets/images/pardes/ogp.png"/>
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="630"/>
+        <meta property="og:image:type" content="image/png"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+    <style>
+        @font-face {
+            src: url("wp/wp-content/themes/matsuo/assets/font/RecklessStandardXL-Regular.woff2") format("woff2");
+            font-family: "Reckless Standard XL";
+        }
+    </style>
+    <style id="wp-img-auto-sizes-contain-inline-css">
+        img:is([sizes=auto i],[sizes^="auto," i]) {
+            contain-intrinsic-size: 3000px 1500px
+        }
+
+        /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+    </style>
+    <style id="wp-emoji-styles-inline-css">
+        img.wp-smiley, img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+
+        /*# sourceURL=wp-emoji-styles-inline-css */
+    </style>
+    <style id="wp-block-library-inline-css">
+        :root {
+            --wp-block-synced-color: #7a00df;
+            --wp-block-synced-color--rgb: 122,0,223;
+            --wp-bound-block-color: var(--wp-block-synced-color);
+            --wp-editor-canvas-background: #ddd;
+            --wp-admin-theme-color: #007cba;
+            --wp-admin-theme-color--rgb: 0,124,186;
+            --wp-admin-theme-color-darker-10: #006ba1;
+            --wp-admin-theme-color-darker-10--rgb: 0,107,160.5;
+            --wp-admin-theme-color-darker-20: #005a87;
+            --wp-admin-theme-color-darker-20--rgb: 0,90,135;
+            --wp-admin-border-width-focus: 2px
+        }
+
+        @media (min-resolution: 192dpi) {
+            :root {
+                --wp-admin-border-width-focus:1.5px
+            }
+        }
+
+        .wp-element-button {
+            cursor: pointer
+        }
+
+        :root .has-very-light-gray-background-color {
+            background-color: #eee
+        }
+
+        :root .has-very-dark-gray-background-color {
+            background-color: #313131
+        }
+
+        :root .has-very-light-gray-color {
+            color: #eee
+        }
+
+        :root .has-very-dark-gray-color {
+            color: #313131
+        }
+
+        :root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background {
+            background: linear-gradient(135deg,#00d084,#0693e3)
+        }
+
+        :root .has-purple-crush-gradient-background {
+            background: linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)
+        }
+
+        :root .has-hazy-dawn-gradient-background {
+            background: linear-gradient(135deg,#faaca8,#dad0ec)
+        }
+
+        :root .has-subdued-olive-gradient-background {
+            background: linear-gradient(135deg,#fafae1,#67a671)
+        }
+
+        :root .has-atomic-cream-gradient-background {
+            background: linear-gradient(135deg,#fdd79a,#004a59)
+        }
+
+        :root .has-nightshade-gradient-background {
+            background: linear-gradient(135deg,#330968,#31cdcf)
+        }
+
+        :root .has-midnight-gradient-background {
+            background: linear-gradient(135deg,#020381,#2874fc)
+        }
+
+        :root {
+            --wp--preset--font-size--normal: 16px;
+            --wp--preset--font-size--huge: 42px
+        }
+
+        .has-regular-font-size {
+            font-size: 1em
+        }
+
+        .has-larger-font-size {
+            font-size: 2.625em
+        }
+
+        .has-normal-font-size {
+            font-size: var(--wp--preset--font-size--normal)
+        }
+
+        .has-huge-font-size {
+            font-size: var(--wp--preset--font-size--huge)
+        }
+
+        :root .has-text-align-center {
+            text-align: center
+        }
+
+        :root .has-text-align-left {
+            text-align: left
+        }
+
+        :root .has-text-align-right {
+            text-align: right
+        }
+
+        .has-fit-text {
+            white-space: nowrap!important
+        }
+
+        #end-resizable-editor-section {
+            display: none
+        }
+
+        .aligncenter {
+            clear: both
+        }
+
+        .items-justified-left {
+            justify-content: flex-start
+        }
+
+        .items-justified-center {
+            justify-content: center
+        }
+
+        .items-justified-right {
+            justify-content: flex-end
+        }
+
+        .items-justified-space-between {
+            justify-content: space-between
+        }
+
+        .screen-reader-text {
+            word-wrap: normal!important;
+            border: 0;
+            clip-path: inset(50%);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px
+        }
+
+        .screen-reader-text:focus {
+            background-color: #ddd;
+            clip-path: none;
+            color: #444;
+            display: block;
+            font-size: 1em;
+            height: auto;
+            left: 5px;
+            line-height: normal;
+            padding: 15px 23px 14px;
+            text-decoration: none;
+            top: 5px;
+            width: auto;
+            z-index: 100000
+        }
+
+        html :where(.has-border-color) {
+            border-style: solid
+        }
+
+        html :where([style*=border-color]) {
+            border-style: solid
+        }
+
+        html :where([style*=border-top-color]) {
+            border-top-style: solid
+        }
+
+        html :where([style*=border-right-color]) {
+            border-right-style: solid
+        }
+
+        html :where([style*=border-bottom-color]) {
+            border-bottom-style: solid
+        }
+
+        html :where([style*=border-left-color]) {
+            border-left-style: solid
+        }
+
+        html :where([style*=border-width]) {
+            border-style: solid
+        }
+
+        html :where([style*=border-top-width]) {
+            border-top-style: solid
+        }
+
+        html :where([style*=border-right-width]) {
+            border-right-style: solid
+        }
+
+        html :where([style*=border-bottom-width]) {
+            border-bottom-style: solid
+        }
+
+        html :where([style*=border-left-width]) {
+            border-left-style: solid
+        }
+
+        html :where(img[class*=wp-image-]) {
+            height: auto;
+            max-width: 100%
+        }
+
+        :where(figure) {
+            margin: 0 0 1em
+        }
+
+        html :where(.is-position-sticky) {
+            --wp-admin--admin-bar--position-offset: var(--wp-admin--admin-bar--height,0px)
+        }
+
+        @media screen and (max-width: 600px) {
+            html :where(.is-position-sticky) {
+                --wp-admin--admin-bar--position-offset:0px
+            }
+        }
+
+        /*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+    </style>
+    <meta name="generator" content="WordPress 7.0.2"/>
+    <link rel="icon" href="wp/wp-content/themes/matsuo/assets/images/pardes/favicon-32.png" sizes="32x32"/>
+    <link rel="icon" href="wp/wp-content/themes/matsuo/assets/images/pardes/favicon-192.png" sizes="192x192"/>
+    <link rel="apple-touch-icon" href="wp/wp-content/themes/matsuo/assets/images/pardes/favicon-180.png"/>
+    <meta name="msapplication-TileImage" content="wp/wp-content/themes/matsuo/assets/images/pardes/favicon-270.png"/>
+    <link rel="apple-touch-icon" href="wp/wp-content/themes/matsuo/assets/images/pardes/apple-touch-icon.png">
+</head>
+<body x-data class="home blog wp-embed-responsive wp-theme-matsuo ">
+    <script>
+        // このミラーは実際のVimeo動画を持たないため、動画読み込み待ちの
+        // オープニング演出が永久に完了せず #page-cover が黒画面のまま
+        // 残ってしまう。テーマ側が「再訪問時はスキップ」用に参照する
+        // sessionStorage フラグを事前にセットし、常にスキップ演出パスを
+        // 使わせることで回避する。
+        try { sessionStorage.setItem('openingAnimePlayed', 'true'); } catch (e) {}
+    </script>
+    <div class="fixed z-[1000] top-[200px] opacity-0" x-text="$store.vimeo.progress" style="width:3em; height:1em; margin:auto; font-size:20px; color:green;"></div>
+    <div id="page-wrapper" style="opacity:0;">
+        <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+            <symbol id="arrow" viewbox="0 0 20 16">
+                <path d="M0 14.6072L18.9798 7.68408V8.31592L0 1.39278L0.547758 0L19.2263 7.68408L20 7.9966L19.2263 8.31592L0.547758 16L0 14.6072Z"/>
+            </symbol>
+            <symbol id="pdf" viewbox="0 0 20 20">
+                <path d="M17.5 17.5V5.625L11.875 0H5C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5V17.5C2.5 18.163 2.76339 18.7989 3.23223 19.2678C3.70107 19.7366 4.33696 20 5 20H15C15.663 20 16.2989 19.7366 16.7678 19.2678C17.2366 18.7989 17.5 18.163 17.5 17.5ZM11.875 3.75C11.875 4.24728 12.0725 4.72419 12.4242 5.07583C12.7758 5.42746 13.2527 5.625 13.75 5.625H16.25V17.5C16.25 17.8315 16.1183 18.1495 15.8839 18.3839C15.6495 18.6183 15.3315 18.75 15 18.75H5C4.66848 18.75 4.35054 18.6183 4.11612 18.3839C3.8817 18.1495 3.75 17.8315 3.75 17.5V2.5C3.75 2.16848 3.8817 1.85054 4.11612 1.61612C4.35054 1.3817 4.66848 1.25 5 1.25H11.875V3.75Z"/>
+                <path d="M5.75192 17.6086C5.50756 17.5123 5.31089 17.3237 5.20442 17.0836C4.96067 16.5986 5.04192 16.1136 5.30442 15.7061C5.55192 15.3223 5.96192 14.9961 6.42567 14.7223C7.01318 14.3893 7.6341 14.1191 8.27817 13.9161C8.77754 13.0164 9.22088 12.0867 9.60567 11.1323C9.37636 10.6107 9.1964 10.0688 9.06817 9.51357C8.96067 9.01357 8.91942 8.51857 9.01067 8.09357C9.10442 7.65107 9.35317 7.25357 9.82317 7.06482C10.0632 6.96857 10.3232 6.91482 10.5757 6.96857C10.7027 6.99561 10.8221 7.05058 10.9252 7.1295C11.0283 7.20841 11.1126 7.3093 11.1719 7.42482C11.2819 7.62982 11.3219 7.86982 11.3307 8.09732C11.3394 8.33232 11.3157 8.59232 11.2719 8.86482C11.1669 9.50232 10.9344 10.2823 10.6219 11.1073C10.9671 11.8447 11.377 12.55 11.8469 13.2148C12.4033 13.1714 12.9628 13.1924 13.5144 13.2773C13.9694 13.3598 14.4319 13.5211 14.7144 13.8586C14.8644 14.0386 14.9557 14.2586 14.9644 14.5061C14.9732 14.7461 14.9057 14.9836 14.7919 15.2098C14.6934 15.4195 14.5406 15.599 14.3494 15.7298C14.1603 15.8528 13.9373 15.9131 13.7119 15.9023C13.2982 15.8848 12.8944 15.6573 12.5457 15.3811C12.1215 15.0305 11.7394 14.6321 11.4069 14.1936C10.5617 14.2898 9.72641 14.4596 8.91067 14.7011C8.53718 15.3635 8.11079 15.9948 7.63567 16.5886C7.27067 17.0261 6.87442 17.4086 6.47692 17.5723C6.24833 17.6748 5.9896 17.6877 5.75192 17.6086ZM7.47567 15.2323C7.26734 15.3282 7.07609 15.4273 6.90192 15.5298C6.49192 15.7723 6.22567 16.0086 6.09317 16.2136C5.97567 16.3948 5.97317 16.5261 6.04317 16.6648C6.0565 16.6915 6.06734 16.7098 6.07567 16.7198L6.11942 16.7048C6.29067 16.6348 6.56317 16.4111 6.91317 15.9898C7.11249 15.7463 7.30019 15.4935 7.47567 15.2323ZM9.52567 13.5698C9.94316 13.4728 10.3643 13.3923 10.7882 13.3286C10.5609 12.9801 10.3482 12.6223 10.1507 12.2561C9.95449 12.6993 9.74608 13.1369 9.52567 13.5686V13.5698ZM12.5832 14.1323C12.7715 14.3365 12.9528 14.5073 13.1269 14.6448C13.4269 14.8823 13.6357 14.9611 13.7494 14.9648C13.7799 14.9696 13.8111 14.9629 13.8369 14.9461C13.8892 14.9053 13.9298 14.8514 13.9544 14.7898C13.9987 14.7136 14.024 14.6279 14.0282 14.5398C14.0269 14.5106 14.0154 14.4827 13.9957 14.4611C13.9307 14.3836 13.7457 14.2711 13.3482 14.1998C13.0952 14.1582 12.8395 14.136 12.5832 14.1336V14.1323ZM10.0957 9.74983C10.1999 9.41022 10.2834 9.06458 10.3457 8.71482C10.384 8.47982 10.3998 8.28607 10.3932 8.13357C10.3938 8.04941 10.3803 7.96575 10.3532 7.88607C10.2906 7.89351 10.2295 7.91036 10.1719 7.93607C10.0632 7.97982 9.97442 8.06857 9.92692 8.28982C9.87692 8.52982 9.88942 8.87607 9.98442 9.31732C10.0144 9.45649 10.0519 9.60066 10.0969 9.74983H10.0957Z"/>
+            </symbol>
+        </svg>
+        <div x-data="header">
+            <div id="header-static" class="absolute top-0 right-0 left-0 z-[calc(var(--layer-drawer)-1)]" :inert="$store.status.menuOpen">
+                <div class="sm:hidden">
+                    <a href="/ja" class="pt-fluid-20 pl-fluid-20 inline-block">
+                        <img class="block w-fluid-45 " src="wp/wp-content/themes/matsuo/assets/images/pardes/wordmark.svg" alt="Pardes Inc." decoding="async"/>
+                    </a>
+                </div>
+                <div class="sm:block hidden">
+                    <div x-data="headerBody" data-header-body class="h-fluid-80 flex justify-between relative items-center" data-header-type=static x-bind:data-action-item="isShown ? 'shown' : 'hidden'">
+                        <nav class="header-static-nav">
+                            <ul class="flex label-md-shippori ml-col-1">
+                                <li>
+                                    <p data-url="/ja/business">
+                                        <a data-text-rotate-anime-root href="/ja/business" class="block h-full leading-[1] pr-fluid-13 py-fluid-20" style="--text-shadow-color-default: var(--color-white); --text-shadow-color-hover: var(--color-white);">
+                                            <span class="block" data-text-rotate-anime-target>事業紹介</span>
+                                        </a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p data-url="/ja/company">
+                                        <a data-text-rotate-anime-root href="/ja/company" class="block h-full leading-[1] px-fluid-13 py-fluid-20" style="--text-shadow-color-default: var(--color-white); --text-shadow-color-hover: var(--color-white);">
+                                            <span class="block" data-text-rotate-anime-target>会社概要</span>
+                                        </a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p data-url="/ja/product">
+                                        <a data-text-rotate-anime-root href="/ja/product" class="block h-full leading-[1] px-fluid-13 py-fluid-20" style="--text-shadow-color-default: var(--color-white); --text-shadow-color-hover: var(--color-white);">
+                                            <span class="block" data-text-rotate-anime-target>製品説明</span>
+                                        </a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="  absolute  m-auto inset-x-0 flex justify-center items-center w-[10vw]">
+                            <a href="/ja" class="">
+                                <img class="block w-fluid-60 mt-fluid-44" src="wp/wp-content/themes/matsuo/assets/images/pardes/wordmark.svg" alt="Pardes Inc." decoding="async"/>
+                            </a>
+                        </div>
+                        <div class="flex items-center header-static-nav--right">
+                            <nav class="mr-fluid-14">
+                                <ul class="flex label-md-shippori">
+                                    <li>
+                                        <p data-url="/ja/news">
+                                            <a data-text-rotate-anime-root href="/ja/news" class="block h-full leading-[1] pr-fluid-13 py-fluid-20" style="--text-shadow-color-default: var(--color-white); --text-shadow-color-hover: var(--color-white);">
+                                                <span class="block" data-text-rotate-anime-target>お知らせ</span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p data-url="/ja/recruit">
+                                            <a data-text-rotate-anime-root href="/ja/recruit" class="block h-full leading-[1] px-fluid-13 py-fluid-20" style="--text-shadow-color-default: var(--color-white); --text-shadow-color-hover: var(--color-white);">
+                                                <span class="block" data-text-rotate-anime-target>採用情報</span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="flex gap-x-fluid-14 ">
+                                <a data-text-rotate-anime-root data-bg-circle-anime-root href="/ja/contact" style="
+			--btn-border: var(--color-white);
+			--btn-border-changed: var(--color-black);
+			--btn-bg: var(--color-white);
+			--btn-text: var(--color-black);
+			--text-shadow-color-default:var(--color-black);
+			--text-shadow-color-hover: var(--color-white);
+		" class="label-sm-shippori border-[1px] border-[var(--btn-border)] bg-[var(--btn-bg)]  py-[1.1em] px-[0.8em] rounded-full flex items-center justify-center h-[1.3em] relative">
+                                    <span data-text-rotate-anime-target class="leading-[1] block relative z-[1]">お問い合わせ</span>
+                                    <div data-bg-circle-anime-target class="w-[110%] aspect-square rounded-full bg-[var(--btn-text)] absolute top-[101%] m-auto"></div>
+                                </a>
+                            </div>
+                            <div class="h-full w-fluid-74 sm:w-fluid-86"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header id="header-dynamic" x-data="header" class="fixed top-0 right-0 left-0 z-[calc(var(--layer-drawer)-2)]" @keydown.window="$store.status.closeByEsc" @scroll.window="onScroll" @scroll.window.once="onScrollOnce" :inert="$store.status.menuOpen" x-cloak>
+                <div class="sm:hidden">
+                    <a href="/ja" class="pt-fluid-20 pl-fluid-20 inline-block"></a>
+                </div>
+                <div class="sm:block hidden">
+                    <div x-data="headerBody" data-header-body class="h-fluid-60 border-b-[1px] border-black20 bg-white flex justify-between relative items-center" data-header-type=dynamic x-bind:data-action-item="isShown ? 'shown' : 'hidden'" role="presentation" tabindex="-1">
+                        <nav class="header-static-nav">
+                            <ul class="flex label-md-shippori ml-col-1">
+                                <li>
+                                    <p data-url="/ja/business">
+                                        <a data-text-rotate-anime-root href="/ja/business" class="block h-full leading-[1] pr-fluid-13 py-fluid-20" style="--text-shadow-color-default: var(--color-black); --text-shadow-color-hover: var(--color-black);">
+                                            <span class="block" data-text-rotate-anime-target>事業紹介</span>
+                                        </a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p data-url="/ja/company">
+                                        <a data-text-rotate-anime-root href="/ja/company" class="block h-full leading-[1] px-fluid-13 py-fluid-20" style="--text-shadow-color-default: var(--color-black); --text-shadow-color-hover: var(--color-black);">
+                                            <span class="block" data-text-rotate-anime-target>会社概要</span>
+                                        </a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p data-url="/ja/product">
+                                        <a data-text-rotate-anime-root href="/ja/product" class="block h-full leading-[1] px-fluid-13 py-fluid-20" style="--text-shadow-color-default: var(--color-black); --text-shadow-color-hover: var(--color-black);">
+                                            <span class="block" data-text-rotate-anime-target>製品説明</span>
+                                        </a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="  absolute  m-auto inset-x-0 flex justify-center items-center w-[10vw]">
+                            <a href="/ja" class="">
+                                <img class="block w-fluid-36" src="wp/wp-content/themes/matsuo/assets/images/pardes/wordmark.svg" alt="Pardes Inc." decoding="async"/>
+                            </a>
+                        </div>
+                        <div class="flex items-center header-static-nav--right">
+                            <nav class="mr-fluid-14">
+                                <ul class="flex label-md-shippori">
+                                    <li>
+                                        <p data-url="/ja/news">
+                                            <a data-text-rotate-anime-root href="/ja/news" class="block h-full leading-[1] pr-fluid-13 py-fluid-20" style="--text-shadow-color-default: var(--color-black); --text-shadow-color-hover: var(--color-black);">
+                                                <span class="block" data-text-rotate-anime-target>お知らせ</span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p data-url="/ja/recruit">
+                                            <a data-text-rotate-anime-root href="/ja/recruit" class="block h-full leading-[1] px-fluid-13 py-fluid-20" style="--text-shadow-color-default: var(--color-black); --text-shadow-color-hover: var(--color-black);">
+                                                <span class="block" data-text-rotate-anime-target>採用情報</span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="flex gap-x-fluid-14 mr-fluid-25">
+                                <a data-text-rotate-anime-root data-bg-circle-anime-root href="/ja/contact" style="
+			--btn-border: var(--color-black);
+			--btn-bg: var(--color-black);
+			--btn-text: var(--color-white);
+			--text-shadow-color-default:var(--color-white);
+			--text-shadow-color-hover: var(--color-black);
+			" class="label-sm-shippori border-[1px] border-[var(--btn-border)] bg-[var(--btn-bg)]  py-[1.1em] px-[0.8em] rounded-full flex items-center justify-center h-[1.3em] relative">
+                                    <span data-text-rotate-anime-target class="leading-[1] block relative z-[1]">お問い合わせ</span>
+                                    <div data-bg-circle-anime-target class="w-[110%] aspect-square rounded-full bg-[var(--btn-text)] absolute top-[101%] m-auto"></div>
+                                </a>
+                            </div>
+                            <div class="h-full w-fluid-74 sm:w-fluid-86"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <button id="hamburger-button" data-hamburger-button :class="$store.status.isResizing ? 'no-transition' : ''" class="fixed top-0 right-0 z-[11] sm:w-fluid-86 w-fluid-70" style="z-index: calc(var(--layer-drawer) + 1); --line-color: var(--color-white); --bg-color: var(--color-black); --line-color--menu-open: var(--color-white);--bg-color--menu-open: var(--color-black);" @click="$store.status.toggle()" :aria-expanded="$store.status.menuOpen" type="button" :aria-label="$store.status.menuOpen ? 'ハンバーガーメニューを閉じる' : 'ハンバーガーメニューを開く'">
+                <div data-hamburger-button-bg class="bg-[var(--bg-color)] absolute top-0 right-0 w-full h-full"></div>
+                <div class="relative aspect-[30/11] w-[38%] mx-auto flex flex-col justify-between items-center ">
+                    <span data-hamburger-button-bar class="-index-0 block w-full h-[1px] bg-[var(--line-color)]"></span>
+                    <span data-hamburger-button-bar class="-index-1 block w-full h-[1px] bg-[var(--line-color)]"></span>
+                    <span data-hamburger-button-bar class="-index-2 block w-full h-[1px] bg-[var(--line-color)]"></span>
+                </div>
+            </button>
+        </div>
+        <div class=" ">
+            <template x-teleport="#js-overlay-container">
+                <div x-data="menu" class=" menu-desktop  |  fixed top-0 left-0 w-full  bg-lightgray  z-[var(--layer-drawer)] |  h-[var(--full-height)] sm:h-screen  " role="dialog" aria-label="メニューだよ" aria-modal="true" tabindex="-1" x-show="$store.status.menuOpen" :aria-expanded="$store.status.menuOpen" x-transition:enter="transition-enter" x-transition:enter-start="transition-enter-start" x-transition:enter-end="transition-enter-end" x-transition:leave="transition-leave" x-transition:leave-start="transition-leave-start" x-transition:leave-end="transition-leave-end" data-lenis-prevent :style="`--full-height: ${$store.status.fullHeight}px`;">
+                    <div class="modal__content | sm-only:scrollable relative w-full h-full" data-lenis-prevent>
+                        <div class="body | sm:flex  sm:h-screen">
+                            <div id="menu-logo" class=" z-[1] shrink-0 sm:w-col-5 pl-col-1 pt-fluid-20 sm-only:pb-fluid-5">
+                                <a href="/ja" class="block w-fluid-44 sm:w-fluid-60">
+                                    <img class="w-full" src="wp/wp-content/themes/matsuo/assets/images/pardes/wordmark.svg" alt="Pardes Inc." decoding="async"/>
+                                </a>
+                            </div>
+                            <div class=" sm:flex flex-1 sm:h-screen ">
+                                <div class="sm:scrollable sm:h-full    sm:mr-col-1 sm-only:mx-col-1   mb-fluid-50">
+                                    <div class="sm:flex flex-col justify-end sm:h-auto sm:pb-fluid-50 sm:min-h-screen">
+                                        <div class="space | flex-1 min-h-0"></div>
+                                        <div class="">
+                                            <div class="relative">
+                                                <p data-delay-target style="--index: 0; --total: 5;" class="font-en kerning font-size-13 sm:font-size-15 tracking-[0.08em] leading-[2.2]  pb-fluid-2 mb-fluid-18 mt-fluid-50 sm:mt-fluid-36">Site map</p>
+                                                <div data-section-heading-underbar class="absolute bottom-0 left-0 w-full h-[1px] bg-black10"></div>
+                                            </div>
+                                            <ul id="menu-site-map" class="grid grid-cols-2 gap-x-fluid-25 gap-y-fluid-12 sm:gap-y-fluid-10 | font-shippori kerning font-size-18 sm:font-size-22 tracking-[0.01em] leading-[1.25]">
+                                                <li data-menu-site-map-item data-url="/ja" class="[&.is-active]:opacity-50  ">
+                                                    <a data-text-rotate-anime-root href="/ja" class="inline-block">
+                                                        <div data-text-rotate-anime-target style="--text-shadow-color-hover: var(--color-black);">ホーム</div>
+                                                    </a>
+                                                </li>
+                                                <li data-menu-site-map-item data-url="/ja/product" class="[&.is-active]:opacity-50  ">
+                                                    <a data-text-rotate-anime-root href="/ja/product" class="inline-block">
+                                                        <div data-text-rotate-anime-target style="--text-shadow-color-hover: var(--color-black);">製品説明</div>
+                                                    </a>
+                                                </li>
+                                                <li data-menu-site-map-item data-url="/ja/business" class="[&.is-active]:opacity-50  ">
+                                                    <a data-text-rotate-anime-root href="/ja/business" class="inline-block">
+                                                        <div data-text-rotate-anime-target style="--text-shadow-color-hover: var(--color-black);">事業紹介</div>
+                                                    </a>
+                                                </li>
+                                                <li data-menu-site-map-item data-url="/ja/news" class="[&.is-active]:opacity-50  ">
+                                                    <a data-text-rotate-anime-root href="/ja/news" class="inline-block">
+                                                        <div data-text-rotate-anime-target style="--text-shadow-color-hover: var(--color-black);">お知らせ</div>
+                                                    </a>
+                                                </li>
+                                                <li data-menu-site-map-item data-url="/ja/recruit" class="[&.is-active]:opacity-50  ">
+                                                    <a data-text-rotate-anime-root href="/ja/recruit" class="inline-block">
+                                                        <div data-text-rotate-anime-target style="--text-shadow-color-hover: var(--color-black);">採用情報</div>
+                                                    </a>
+                                                </li>
+                                                <li data-menu-site-map-item data-url="/ja/company" class="[&.is-active]:opacity-50  ">
+                                                    <a data-text-rotate-anime-root href="/ja/company" class="inline-block">
+                                                        <div data-text-rotate-anime-target style="--text-shadow-color-hover: var(--color-black);">会社概要</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" shrink-0 sm:w-col-28 relative  sm-only:mt-fluid-50">
+                                    <div class="sm-only:absolute sm-only:top-0  sm:relative  overflow-hidden w-full h-full">
+                                        <div class="relative overflow-hidden w-full h-full">
+                                            <div class="relative aspect-[1/1] overflow-hidden w-full h-full z-[1]">
+                                                <img class="absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/hero-2.svg" alt="" decoding="async"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative z-[1] sm:absolute bottom-0 right-0  sm:w-col-15 sm:mr-col-1  sm-only:px-col-1 sm-only:pt-fluid-20 sm:scrollable sm:h-full">
+                                        <div class="pb-fluid-56 sm:min-h-screen sm:flex flex-col justify-end">
+                                            <div class="text-white">
+                                                <div class="">
+                                                    <h3 class="font-shippori kerning font-size-13 sm:font-size-15 tracking-[0.05em] leading-[1] border-b border-[var(--title-underline-color)] pb-fluid-10 mb-fluid-18" style="
+		--title-underline-color: var(--color-white10);
+		--underline-color: var(--color-white);
+		--hoverd-underline-color: var(--color-white);
+		--text-shadow-color-default:var(--color-white);
+		--text-shadow-color-hover: var(--color-white);
+		">各種お問い合わせ</h3>
+                                                    <ul class="sm:mt-fluid-25 [&_li+li]:mt-fluid-10">
+                                                        <li>
+                                                            <p class="font-en kerning font-size-13 sm:font-size-15 tracking-[0.06em] leading-[2.2]">PoC
+													inquiries
+
+					</p>
+                                                            <a href="/ja/contact" class="font-shippori kerning font-size-18 sm:font-size-25 tracking-[0.05em] leading-[1.5] flex justify-between items-center pb-fluid-11 sm:pb-fluid-20" data-text-rotate-anime-root data-underline-anime2-root data-arrow-slide-in-anime-root style="
+		--title-underline-color: var(--color-white10);
+		--underline-color: var(--color-white);
+		--hoverd-underline-color: var(--color-white);
+		--text-shadow-color-default:var(--color-white);
+		--text-shadow-color-hover: var(--color-white);
+		">
+                                                                <span data-text-rotate-anime-target class="block" style="">お問い合わせフォーム
+						</span>
+                                                                <div class="arrow-slide-in | shrink-0 box-content overflow-hidden color-red pl-fluid-10 w-fluid-15 sm:w-fluid-20 ">
+                                                                    <div class="arrow-slide-in-inner | flex relative justify-center items-center">
+                                                                        <svg class="arrow-slide-in__icon -arrow-1 | w-full aspect-[20/16] fill-white">
+                                                                            <use xlink:href="#arrow"></use>
+                                                                        </svg>
+                                                                        <svg class="arrow-slide-in__icon -arrow-2 | w-full aspect-[20/16] fill-white">
+                                                                            <use xlink:href="#arrow"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <div data-underline-anime2-target style="
+		--title-underline-color: var(--color-white10);
+		--underline-color: var(--color-white);
+		--hoverd-underline-color: var(--color-white);
+		--text-shadow-color-default:var(--color-white);
+		--text-shadow-color-hover: var(--color-white);
+		"></div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <p class="font-en kerning font-size-13 sm:font-size-15 tracking-[0.06em] leading-[2.2]">Career
+																		applications
+					</p>
+                                                            <a href="/ja/recruit" class="font-shippori kerning font-size-18 sm:font-size-25 tracking-[0.05em] leading-[1.5] flex justify-between items-center pb-fluid-11 sm:pb-fluid-20" data-text-rotate-anime-root data-underline-anime2-root data-arrow-slide-in-anime-root style="
+		--title-underline-color: var(--color-white10);
+		--underline-color: var(--color-white);
+		--hoverd-underline-color: var(--color-white);
+		--text-shadow-color-default:var(--color-white);
+		--text-shadow-color-hover: var(--color-white);
+		">
+                                                                <span data-text-rotate-anime-target class="block" style="">採用情報
+						</span>
+                                                                <div class="arrow-slide-in | shrink-0 box-content overflow-hidden color-red pl-fluid-10 w-fluid-15 sm:w-fluid-20 ">
+                                                                    <div class="arrow-slide-in-inner | flex relative justify-center items-center">
+                                                                        <svg class="arrow-slide-in__icon -arrow-1 | w-full aspect-[20/16] fill-white">
+                                                                            <use xlink:href="#arrow"></use>
+                                                                        </svg>
+                                                                        <svg class="arrow-slide-in__icon -arrow-2 | w-full aspect-[20/16] fill-white">
+                                                                            <use xlink:href="#arrow"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <div data-underline-anime2-target style="
+		--title-underline-color: var(--color-white10);
+		--underline-color: var(--color-white);
+		--hoverd-underline-color: var(--color-white);
+		--text-shadow-color-default:var(--color-white);
+		--text-shadow-color-hover: var(--color-white);
+		"></div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="/ja/legal/privacy" data-text-rotate-anime-root class="block mt-fluid-20 sm:mt-fluid-30 font-shippori kerning font-size-13 sm:font-size-15 tracking-[0.01em] leading-[2] text-white text-right">
+                                                <div data-text-rotate-anime-target class="leading-[1]" style="--text-shadow-color-default: var(--color-white); --text-shadow-color-hover: var(--color-white);">プライバシーポリシー</div>
+                                            </a>
+                                            <div class="sm:hidden  w-full " :style="`height: 140px`"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div :inert="$store.status.menuOpen">
+            <main>
+                <div id="page-cover" class="w-full  fixed  top-0  bg-black pointer-events-none z-[calc(var(--opening-anime)-1)] | h-[var(--full-height)] sm:h-screen " :style="`--full-height: ${$store.status.fullHeight}px;--opening-anime-progress: ${$store.vimeo.progress};`">
+                    <div class="sticky"></div>
+                    <div class="__border-[2px] border-orange absolute top-0 m-auto  w-full | h-[var(--height)] sm:h-screen" :style="`--height: ${$store.status.svhHeight - 10}px;`">
+                        <div id="loading-progress" class="absolute inset-0 m-auto h-[2px] w-[62vw] sm:w-[14.2vw]">
+                            <div class="absolute top-0 left-0 w-full h-[2px] bg-white opacity-30"></div>
+                            <div class="absolute top-0 left-0 w-full h-[2px] bg-white " style="transform-origin: left; transform: scaleX(var(--opening-anime-progress));"></div>
+                        </div>
+                    </div>
+                </div>
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-0 w-0 h-0 pointer-events-none">
+                    <clipPath id="logoClipPath" clippathunits="objectBoundingBox">
+                        <path d="M0,0 L1,0 L1,1 L0,1 Z M0.5002 0.334, 0.8327 0.0058, 0.9995 0.167, 1 0.166V0.834L0.8336 1L0.6672 0.834V0.4983L0.5002 0.668L0.3401 0.507L0.3399 0.5075L0.3344 0.501V0.834L0.1681 1L0.0016 0.834V0.1812L0 0.1655L0.1653 0L0.5002 0.334Z" clip-rule="evenodd" transform="scale(1)" transform-origin="0.5 0.5" style="transform-origin: 0.5 0.5"/>
+                    </clipPath>
+                </svg>
+                <div x-data="openingAnime" class="w-full fixed top-0 left-0 z-[var(--opening-anime)] flex justify-center items-center pointer-events-none | h-[var(--full-height)] sm:h-screen" :style="`--full-height: ${$store.status.fullHeight}px;`" style="">
+                    <div class="sticky"></div>
+                    <div data-clip-logo-wrapper class="aspect-[120/157] __w-fluid-90  inset-x-0 m-auto absolute" :class="$store.status.touchable ? 'top-[41vh]' : 'inset-y-0'">
+                        <div class=" w-full h-full absolute top-0 inset-x-0">
+                            <div data-clip-logo class="w-full  top-0 m-auto absolute  mask bg-black">
+                                <img class="opacity-0 w-full" src="wp/wp-content/themes/matsuo/assets/images/pardes/wordmark.svg" alt=""/>
+                            </div>
+                            <div data-clip-logo-outline class="clip-logo-outline | w-full  top-0 m-auto absolute">
+                                <img class="opacity-0 w-full" src="wp/wp-content/themes/matsuo/assets/images/pardes/wordmark.svg" alt=""/>
+                            </div>
+                            <img data-clip-logo-company-name class="w-full absolute bottom-0 inset-x-0" src="wp/wp-content/themes/matsuo/assets/images/pardes/wordmark.svg" alt="" decoding="async"/>
+                        </div>
+                    </div>
+                    <div data-color-logo-wrapper class="aspect-[120/157] __w-fluid-90 inset-x-0 m-auto absolute" :class="$store.status.touchable ? 'top-[41vh]' : 'inset-y-0'">
+                        <div data-color-logo class=" w-full h-full absolute top-0 inset-x-0">
+                            <img class="w-full  absolute top-0 inset-x-0" src="wp/wp-content/themes/matsuo/assets/images/pardes/wordmark.svg" alt="" decoding="async"/>
+                            <img class="w-full absolute bottom-0 inset-x-0" src="wp/wp-content/themes/matsuo/assets/images/pardes/wordmark.svg" alt="" decoding="async"/>
+                        </div>
+                        <div class="absolute inset-x-0 top-0 w-full m-auto  aspect-[1/1] overflow-hidden">
+                            <div data-color-logo-cover class=" absolute top-0 right-[100%] w-[400%]  h-full">
+                                <img class="w-full h-full" src="wp/wp-content/themes/matsuo/assets/images/logo-cover-gradient.png" alt="" decoding="async"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div x-data="homeMainVisual" class="relative">
+                    <div x-data="sectionParallax('#home-about')">
+                        <p class="fixed top-150 right-100 z-[10] text-bold opacity-[0]" x-text="progress?.toFixed(2) ?? progress"></p>
+                        <div class="sticky top-0 w-full   flex items-center justify-center | h-[var(--full-height)] sm:h-screen " :style="`--full-height: ${$store.status.fullHeight}px;`" :class="{'!h-[calc(var(--full-height)+18px) ': $store.status.isX}">
+                            <div class="relative overflow-hidden w-full h-full">
+                                <div class="relative aspect-[1/1] overflow-hidden w-full h-full z-[1]">
+                                    <img class="absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/hero-1.svg" alt="" decoding="async"/>
+                                </div>
+                            </div>
+                            <div data-clip-image class="__image-clip-mask | absolute inset-0 m-auto w-full h-full __bg-red aspect-[315/420] z-[2]" style="--tl: 0;--tr: 0;--bl: 0;--br: 0;'}}">
+                                <div data-clip-image-inner class="absolute inset-0  w-full h-full overflow-hidden " style="opacity:0;filter: brightness(1.9);">
+                                    <div data-home-mv-bg-image-target class="absolute inset-0 m-auto aspect-[1/1] overflow-hidden ">
+                                        <img class="absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/hero-1.svg" alt="" decoding="async"/>
+                                    </div>
+                                    <div data-home-mv-bg-image-target class="absolute inset-0 m-auto aspect-[1/1] overflow-hidden ">
+                                        <img class="absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/hero-2.svg" alt="" decoding="async"/>
+                                    </div>
+                                    <div data-home-mv-bg-image-target class="absolute inset-0 m-auto aspect-[1/1] overflow-hidden ">
+                                        <img class="absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/hero-3.svg" alt="" decoding="async"/>
+                                    </div>
+                                    <div data-home-mv-bg-image-target class="absolute inset-0 m-auto aspect-[1/1] overflow-hidden ">
+                                        <img class="absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/hero-4.svg" alt="" decoding="async"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="  mt-[-100vh] w-full  flex items-end relative __border-[2px] border-green | h-[var(--height)] sm:h-screen" :style="`--height: ${$store.status.svhHeight - $store.status.toolBarTopHeight}px;`">
+                            <div class="absolute w-full sm:w-col-11 h-full  right-0 ">
+                            </div>
+                            <div class="flex sm-only:flex-col justify-between relative w-full items-start ml-col-1 text-white sm-only:h-[70vh]">
+                                <hgroup class="mb-fluid-10">
+                                    <p data-home-mv-sub-title style="opacity:0" class=" font-en kerning font-size-14 sm:font-size-21 tracking-[0.04em] leading-[1]">AGI Startup</p>
+                                    <div data-home-mv-title style="opacity:0" class="font-shippori kerning font-size-36 sm:font-size-80 tracking-[0.1em] leading-[1.4] mt-fluid-18 sm:mt-fluid-30" aria-hidden="true">
+                                        <div class="text-white inline-table">
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.00s;" data-dir="4" data-show="bottom">
+                                                <span style="transition-delay:0.00s" class="visibility-hidden">自
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.06s;" data-dir="3" data-show="bottom">
+                                                <span style="transition-delay:0.06s" class="visibility-hidden">由
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.12s;" data-dir="4" data-show="bottom">
+                                                <span style="transition-delay:0.12s" class="visibility-hidden">意
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.18s;" data-dir="1" data-show="bottom">
+                                                <span style="transition-delay:0.18s" class="visibility-hidden">志
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.24s;" data-dir="2" data-show="bottom">
+                                                <span style="transition-delay:0.24s" class="visibility-hidden">を
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.30s;" data-dir="2" data-show="bottom">
+                                                <span style="transition-delay:0.30s" class="visibility-hidden">持
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.36s;" data-dir="2" data-show="bottom">
+                                                <span style="transition-delay:0.36s" class="visibility-hidden">つ
+							</span>
+                                            </span>
+                                            <br/>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.42s;" data-dir="4" data-show="bottom">
+                                                <span style="transition-delay:0.42s" class="visibility-hidden">汎
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.48s;" data-dir="3" data-show="bottom">
+                                                <span style="transition-delay:0.48s" class="visibility-hidden">用
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.54s;" data-dir="4" data-show="bottom">
+                                                <span style="transition-delay:0.54s" class="visibility-hidden">人
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.60s;" data-dir="1" data-show="bottom">
+                                                <span style="transition-delay:0.60s" class="visibility-hidden">工
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.66s;" data-dir="2" data-show="bottom">
+                                                <span style="transition-delay:0.66s" class="visibility-hidden">知
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.72s;" data-dir="2" data-show="bottom">
+                                                <span style="transition-delay:0.72s" class="visibility-hidden">能
+							</span>
+                                            </span>
+                                            <span style="white-space:nowrap;display:inline-block"><span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.78s;" data-dir="2" data-show="bottom">
+                                                <span style="transition-delay:0.78s" class="visibility-hidden">（
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.84s;" data-dir="3" data-show="bottom">
+                                                <span style="transition-delay:0.84s" class="visibility-hidden">A
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.90s;" data-dir="4" data-show="bottom">
+                                                <span style="transition-delay:0.90s" class="visibility-hidden">G
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:0.96s;" data-dir="3" data-show="bottom">
+                                                <span style="transition-delay:0.96s" class="visibility-hidden">I
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:1.02s;" data-dir="4" data-show="bottom">
+                                                <span style="transition-delay:1.02s" class="visibility-hidden">）
+							</span>
+                                            </span></span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:1.08s;" data-dir="1" data-show="bottom">
+                                                <span style="transition-delay:1.08s" class="visibility-hidden">の
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:1.14s;" data-dir="2" data-show="bottom">
+                                                <span style="transition-delay:1.14s" class="visibility-hidden">実
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:1.20s;" data-dir="2" data-show="bottom">
+                                                <span style="transition-delay:1.20s" class="visibility-hidden">現
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:1.26s;" data-dir="2" data-show="bottom">
+                                                <span style="transition-delay:1.26s" class="visibility-hidden">へ
+							</span>
+                                            </span>
+                                            <span class="text-split-anime " x-data="addClass" data-class-name="" style="transition-delay:1.32s;" data-dir="3" data-show="bottom">
+                                                <span style="transition-delay:1.32s" class="visibility-hidden">。
+							</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h1 class="sr-only">自由意志を持つ汎用人工知能（AGI）の実現へ。</h1>
+                                </hgroup>
+                                <div data-home-mv-scroll-down class="opacity-0 absolute inset-x-0 m-auto bottom-fluid-20 font-en kerning font-size-16 leading-[1] text-center sm:block hidden" :class="scrollDownShow ? 'is-show' : 'is-hide'">Scroll down
+				</div>
+                                <div data-home-mv-info class="bg-white opacity-0 __aspect-[227/129] w-fluid-214 sm:w-fluid-230 mt-auto text-black sm-only:ml-auto mr-fluid-4 mb-fluid-4 p-fluid-10 pb-fluid-12 sm:pb-fluid-15 z-[1]" :class="scrollDownShow ? 'is-show' : 'is-hide'">
+                                    <p class="font-en kerning font-size-12 leading-[1.2]">Recent update</p>
+                                    <a href="#" class="home-main-visual-info-link | flex items-start gap-fluid-30 mt-fluid-23 sm:mt-fluid-34">
+                                        <p data-hover-fade-target class="font-kozuka font-size-12 tracking-[0.01em] leading-[1.5] block relative">
+                                            <span aria-hidden="true" class="home-main-visual-info-link__title | text-transparent absolute top-0 left-0 inline-block select-none underline decoration-black decoration-1 line-clamp-4">コーポレートサイトを公開しました。</span>
+                                            <span class="line-clamp-4">コーポレートサイトを公開しました。</span>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-clip-rect-anime-trigger>
+                            <div class="ml-col-1 sm:ml-fluid-100 [&>p+p]:mt-fluid-40 mt-fluid-110 sm:mt-fluid-170 text-white pb-fluid-115 sm:pb-fluid-274">
+                                <p class="font-kozuka font-size-20 sm:font-size-30 tracking-[0.01em] leading-[1.6] sm:leading-[1.52] z-[1] relative kerning-halt sm-only:[&>span]:-ml-[0.2em] [&>span]:mr-[0.25em] sm:[&>span]:mr-[0.2em] [&>span]:font-size-21 sm:[&>span]:font-size-34 [&>span]:tracking-[-0.14em]">
+                                    Pardesは、誤差逆伝播法（バックプロパゲーション）に依存しない、<br>
+                                    生物学的妥当性の高いニューラルネットワーク「BiNet」を開発しています。<br>
+                                    あらゆる動体に「脳」を宿すことで、物理世界における<br>AIの可能性を拡張します。
+                                </p>
+                                <p class="font-kozuka font-size-20 sm:font-size-30 tracking-[0.01em] leading-[1.6] sm:leading-[1.52] z-[1] relative kerning-halt sm-only:[&>span]:-ml-[0.2em] [&>span]:mr-[0.25em] sm:[&>span]:mr-[0.2em] [&>span]:font-size-21 sm:[&>span]:font-size-34 [&>span]:tracking-[-0.14em]">
+                                    勾配計算に依存しない確率的な学習プロセスにより、<br>大規模な学習データやGPUクラスタを<br>前提としない知能実装を目指します。
+                                </p>
+                                <p class="font-kozuka font-size-20 sm:font-size-30 tracking-[0.01em] leading-[1.6] sm:leading-[1.52] z-[1] relative kerning-halt sm-only:[&>span]:-ml-[0.2em] [&>span]:mr-[0.25em] sm:[&>span]:mr-[0.2em] [&>span]:font-size-21 sm:[&>span]:font-size-34 [&>span]:tracking-[-0.14em]">
+                                    新しい経験を学習しても、既存の知識を<br>上書きしにくい設計原理を採用し、<br>現場で学び続けられる知能を目指します。
+                                </p>
+                                <p class="font-kozuka font-size-20 sm:font-size-30 tracking-[0.01em] leading-[1.6] sm:leading-[1.52] z-[1] relative kerning-halt sm-only:[&>span]:-ml-[0.2em] [&>span]:mr-[0.25em] sm:[&>span]:mr-[0.2em] [&>span]:font-size-21 sm:[&>span]:font-size-34 [&>span]:tracking-[-0.14em]">
+                                    クラウドへの常時接続を前提とせず、<br>ロボット本体上の限られた計算資源で<br>リアルタイムに学習・適応することを目指します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section id="home-about" class="relative bg-white l-container">
+                    <h2 class="text-en-heading-md pt-fluid-20 sm:pt-fluid-28 ">About us
+</h2>
+                    <p class="body-md-kozuka text-indent items-stretch mt-fluid-48 sm:mt-fluid-97 sm:w-col-19">ビジョン、BiNetの技術、組織のあり方。Pardesの取り組みについてご紹介します。
+		</p>
+                    <div class="mt-fluid-48 sm:mt-fluid-150 relative">
+                        <template x-if="$store.status.touchable">
+                            <ul>
+                                <li data-image-mask-list-trigger>
+                                    <a href="/ja/business" class="block py-fluid-18 sm:py-fluid-30  relative" data-text-rotate-anime-root data-underline-anime-root>
+                                        <p class="font-shippori kerning font-size-24 sm:font-size-44 tracking-[0.05em] sm:tracking-[0.1em] leading-[1]" data-text-rotate-anime-target>事業紹介
+									</p>
+                                        <div data-underline-anime-target class="bg-blue z-[1]" style="--underline-color-default:var(--color-black20)"></div>
+                                        <div class=" absolute inset-y-0 right-0">
+                                            <div class="relative aspect-[48/60] overflow-hidden h-full ">
+                                                <img class="absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/about-business.svg" alt="" decoding="async"/>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li data-image-mask-list-trigger>
+                                    <a href="/ja/product" class="block py-fluid-18 sm:py-fluid-30  relative" data-text-rotate-anime-root data-underline-anime-root>
+                                        <p class="font-shippori kerning font-size-24 sm:font-size-44 tracking-[0.05em] sm:tracking-[0.1em] leading-[1]" data-text-rotate-anime-target>製品説明
+									</p>
+                                        <div data-underline-anime-target class="bg-blue z-[1]" style="--underline-color-default:var(--color-black20)"></div>
+                                        <div class=" absolute inset-y-0 right-0">
+                                            <div class="relative aspect-[48/60] overflow-hidden h-full ">
+                                                <img class="absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/about-product.svg" alt="" decoding="async"/>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li data-image-mask-list-trigger>
+                                    <a href="/ja/company" class="block py-fluid-18 sm:py-fluid-30  relative" data-text-rotate-anime-root data-underline-anime-root>
+                                        <p class="font-shippori kerning font-size-24 sm:font-size-44 tracking-[0.05em] sm:tracking-[0.1em] leading-[1]" data-text-rotate-anime-target>会社概要
+									</p>
+                                        <div data-underline-anime-target class="bg-blue z-[1]" style="--underline-color-default:var(--color-black20)"></div>
+                                        <div class=" absolute inset-y-0 right-0">
+                                            <div class="relative aspect-[48/60] overflow-hidden h-full ">
+                                                <img class="absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/about-company.svg" alt="" decoding="async"/>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </template>
+                        <template x-if="!$store.status.touchable">
+                            <div class="relative" x-data="homeImageMaskChange">
+                                <ul x-bind="listWrapperEventListener">
+                                    <li x-bind="eventListener" data-image-mask-list-trigger>
+                                        <a href="/ja/business" class="block py-fluid-18 sm:py-fluid-30  relative" data-text-rotate-anime-root data-underline-anime-root>
+                                            <p class="font-shippori kerning font-size-24 sm:font-size-44 tracking-[0.05em] sm:tracking-[0.1em] leading-[1]" data-text-rotate-anime-target>事業紹介
+										</p>
+                                            <div data-underline-anime-target class="bg-blue z-[1] "></div>
+                                        </a>
+                                    </li>
+                                    <li x-bind="eventListener" data-image-mask-list-trigger>
+                                        <a href="/ja/product" class="block py-fluid-18 sm:py-fluid-30  relative" data-text-rotate-anime-root data-underline-anime-root>
+                                            <p class="font-shippori kerning font-size-24 sm:font-size-44 tracking-[0.05em] sm:tracking-[0.1em] leading-[1]" data-text-rotate-anime-target>製品説明
+										</p>
+                                            <div data-underline-anime-target class="bg-blue z-[1] "></div>
+                                        </a>
+                                    </li>
+                                    <li x-bind="eventListener" data-image-mask-list-trigger>
+                                        <a href="/ja/company" class="block py-fluid-18 sm:py-fluid-30  relative" data-text-rotate-anime-root data-underline-anime-root>
+                                            <p class="font-shippori kerning font-size-24 sm:font-size-44 tracking-[0.05em] sm:tracking-[0.1em] leading-[1]" data-text-rotate-anime-target>会社概要
+										</p>
+                                            <div data-underline-anime-target class="bg-blue z-[1] "></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="absolute bottom-[-1.6px] aspect-[372/465] w-fluid-372 right-0 z-[1] pointer-events-none">
+                                    <div data-image-mask-image-target style="--tl: 0;--tr: 0;--bl: 0;--br: 0;'}}" class=" aspect-[372/465] overflow-hidden h-full  absolute top-0 left-0">
+                                        <img class="absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/about-business.svg" alt="" decoding="async"/>
+                                    </div>
+                                    <div data-image-mask-image-target style="--tl: 0;--tr: 0;--bl: 0;--br: 0;'}}" class=" aspect-[372/465] overflow-hidden h-full  absolute top-0 left-0">
+                                        <img class="absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/about-product.svg" alt="" decoding="async"/>
+                                    </div>
+                                    <div data-image-mask-image-target style="--tl: 0;--tr: 0;--bl: 0;--br: 0;'}}" class=" aspect-[372/465] overflow-hidden h-full  absolute top-0 left-0">
+                                        <img class="absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/about-company.svg" alt="" decoding="async"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </section>
+                <style>
+                    .debug-observer {
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        z-index: 9999;
+                        border-radius: 4px;
+                        background: rgba(0, 0, 0, 0.8);
+                        padding: 10px;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 10px;
+                    }
+
+                    .debug-observer div {
+                        margin: 5px 0;
+                    }
+                </style>
+                <section id="home-works" class="mt-fluid-72 sm:mt-fluid-180 ">
+                    <div class="l-container" :class="{'!h-[calc(var(--full-height)-24px)]': $store.status.isX}">
+                        <h2 class="text-en-heading-md pt-fluid-20 sm:pt-fluid-28 ">BIL Lineup
+</h2>
+                        <div class="mt-[-0.85em] sm:mt-[-0.65em] font-en kerning font-size-48 sm:font-size-120 ">
+                            <div class="" aria-hidden="true">
+                                <div class="text-gray inline-table leading-[0.9] sm:leading-[0.8]">
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.00s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.00s" class="visibility-hidden">I
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.02s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.02s" class="visibility-hidden">n
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.04s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.04s" class="visibility-hidden">t
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.06s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.06s" class="visibility-hidden">e
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.08s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.08s" class="visibility-hidden">l
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.10s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.10s" class="visibility-hidden">l
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.12s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.12s" class="visibility-hidden">i
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.14s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.14s" class="visibility-hidden">g
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.16s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.16s" class="visibility-hidden">e
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.18s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.18s" class="visibility-hidden">n
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.20s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.20s" class="visibility-hidden">c
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.22s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.22s" class="visibility-hidden">e
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.24s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.24s" class="visibility-hidden">,
+							</span>
+                                    </span>
+                                    <br/>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.26s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.26s" class="visibility-hidden">L
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.28s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.28s" class="visibility-hidden">i
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.30s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.30s" class="visibility-hidden">c
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.32s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.32s" class="visibility-hidden">e
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.34s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.34s" class="visibility-hidden">n
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.36s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.36s" class="visibility-hidden">s
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.38s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.38s" class="visibility-hidden">e
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.40s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.40s" class="visibility-hidden">d
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.25em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.42s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.42s" class="visibility-hidden">.
+							</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sr-only">Intelligence, Licensed.</div>
+                        </div>
+                    </div>
+                    <div class="relative mt-fluid-18 sm:mt-fluid-30 " x-data="homeWorks" :class="{ 'overflow-clip': $store.status.isXandLine }">
+                        <p class=" fixed top-150 right-100 z-[10] text-bold opacity-[0]" x-text=" currentsectionnum"></p>
+                        <div class="sticky top-0 w-full | h-[var(--full-height)] sm:h-screen" :style="`--full-height: ${$store.status.fullHeight}px;`" :class="{'min-h-[calc(var(--full-height)+24px)] z-[1]': $store.status.isXandLine, '!top-[24px]': $store.status.isX}">
+                            <div x-data="sectionParallax('#home-news')" class="h-full flex items-center justify-center">
+                                <div data-home-works-parallax-image-container class="w-full overflow-hidden | h-[var(--full-height)] sm:h-screen " style="" :style="`--full-height: ${$store.status.fullHeight}px;`" :class="{'min-h-[calc(var(--full-height)+24px)] !overflow-clip': $store.status.isXandLine }">
+                                    <div class="backface-hidden " data-home-works-parallax-image-target>
+                                        <template x-if="!$store.status.tablet">
+                                            <img class="w-full" src="wp/wp-content/themes/matsuo/assets/images/pardes/showcase-1.svg" alt="" decoding="async"/>
+                                        </template>
+                                        <template x-if="$store.status.tablet">
+                                            <img class="w-full" src="wp/wp-content/themes/matsuo/assets/images/pardes/showcase-1.svg" alt="" decoding="async"/>
+                                        </template>
+                                    </div>
+                                </div>
+                                <div class="w-full  absolute top-0 left-0 | h-[var(--full-height)] sm:h-screen" data-home-works-parallax-image-overlay :style="`--full-height: ${$store.status.fullHeight}px;`" :class="{'min-h-[calc(var(--full-height)+24px)]': $store.status.isXandLine }">
+                                    <div class="w-full h-full bg-black opacity-[0.65]"></div>
+                                </div>
+                                <div class="absolute  top-0 z-[1] w-full h-[100vh] sm:h-screen  left-0 flex  justify-between text-white items-center ">
+                                    <div class="sm:block hidden ml-fluid-236">
+                                        <div data-home-works-show-target data-text-show-root class="overflow-hidden  font-en kerning font-size-21 tracking-[0.01em] leading-[1.2]">
+                                            <p data-text-show-target class="">Pick up</p>
+                                        </div>
+                                    </div>
+                                    <div data-home-works-show-target data-text-show-root class="h-[0.8em] absolute inset-0 m-auto flex items-center justify-center overflow-hidden  font-en kerning font-size-48 sm:font-size-120  leading-[1] tracking-[-0.1em]">
+                                        <div data-text-show-target class="">
+                                            <div data-home-works-toggle-show-content-wrapper class="relative   w-[1.3em] flex items-center justify-center">
+                                                <p data-home-works-toggle-show-content x-bind:aria-hidden="currentSectionNum == 0 ? 'false' : 'true'" class=" m-auto inset-0 text-center leading-[1] tabular-nums">01</p>
+                                                <p data-home-works-toggle-show-content x-bind:aria-hidden="currentSectionNum == 1 ? 'false' : 'true'" class="absolute  m-auto inset-0 text-center leading-[1] tabular-nums">02</p>
+                                                <p data-home-works-toggle-show-content x-bind:aria-hidden="currentSectionNum == 2 ? 'false' : 'true'" class="absolute  m-auto inset-0 text-center leading-[1] tabular-nums">03</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-home-works-show-target data-text-show-root class="sm:block hidden pr-fluid-150 overflow-hidden  ">
+                                        <div class="font-shippori kerning font-size-16 sm:font-size-21 tracking-[0.05em] leading-[1.2] " data-text-show-target>
+                                            <div class="!h-[1.4em] w-[20em]" data-home-works-toggle-show-content-wrapper id="home-works-link-wrapper">
+                                                <div data-home-works-toggle-show-content data-index="0" class=" absolute inset-y-0 right-0 " x-bind:aria-hidden="currentSectionNum == 0 ? 'false' : 'true'">
+                                                    <a href="/ja/product" class=" flex justify-between items-center" data-text-rotate-anime-root data-arrow-slide-in-anime-root>
+                                                        <span data-text-rotate-anime-target class="block mr-[0.3em] overflow-hidden whitespace-nowrap text-ellipsis sm:max-w-[12em] tab:max-w-[15em] " style=" --text-shadow-color-hover: var(--color-white);--text-shadow-color-default: var(--color-white)">BiNet SDK
+												</span>
+                                                        <div class="arrow-slide-in | shrink-0 box-content overflow-hidden color-red pl-fluid-10 w-fluid-20 ">
+                                                            <div class="arrow-slide-in-inner | flex relative justify-center items-center">
+                                                                <svg class="arrow-slide-in__icon -arrow-1 | w-full aspect-[20/16] fill-white">
+                                                                    <use xlink:href="#arrow"></use>
+                                                                </svg>
+                                                                <svg class="arrow-slide-in__icon -arrow-2 | w-full aspect-[20/16] fill-white">
+                                                                    <use xlink:href="#arrow"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div data-home-works-toggle-show-content data-index="1" class="is-hide  absolute inset-y-0 right-0  " x-bind:aria-hidden="currentSectionNum == 1 ? 'false' : 'true'">
+                                                    <a href="/ja/product" class=" flex justify-between items-center" data-text-rotate-anime-root data-arrow-slide-in-anime-root>
+                                                        <span data-text-rotate-anime-target class="block mr-[0.3em] overflow-hidden whitespace-nowrap text-ellipsis sm:max-w-[12em] tab:max-w-[15em] " style=" --text-shadow-color-hover: var(--color-white);--text-shadow-color-default: var(--color-white)">BiNet Binary Module
+												</span>
+                                                        <div class="arrow-slide-in | shrink-0 box-content overflow-hidden color-red pl-fluid-10 w-fluid-20 ">
+                                                            <div class="arrow-slide-in-inner | flex relative justify-center items-center">
+                                                                <svg class="arrow-slide-in__icon -arrow-1 | w-full aspect-[20/16] fill-white">
+                                                                    <use xlink:href="#arrow"></use>
+                                                                </svg>
+                                                                <svg class="arrow-slide-in__icon -arrow-2 | w-full aspect-[20/16] fill-white">
+                                                                    <use xlink:href="#arrow"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div data-home-works-toggle-show-content data-index="2" class="is-hide  absolute inset-y-0 right-0  " x-bind:aria-hidden="currentSectionNum == 2 ? 'false' : 'true'">
+                                                    <a href="/ja/product" class=" flex justify-between items-center" data-text-rotate-anime-root data-arrow-slide-in-anime-root>
+                                                        <span data-text-rotate-anime-target class="block mr-[0.3em] overflow-hidden whitespace-nowrap text-ellipsis sm:max-w-[12em] tab:max-w-[15em] " style=" --text-shadow-color-hover: var(--color-white);--text-shadow-color-default: var(--color-white)">Custom Integration
+												</span>
+                                                        <div class="arrow-slide-in | shrink-0 box-content overflow-hidden color-red pl-fluid-10 w-fluid-20 ">
+                                                            <div class="arrow-slide-in-inner | flex relative justify-center items-center">
+                                                                <svg class="arrow-slide-in__icon -arrow-1 | w-full aspect-[20/16] fill-white">
+                                                                    <use xlink:href="#arrow"></use>
+                                                                </svg>
+                                                                <svg class="arrow-slide-in__icon -arrow-2 | w-full aspect-[20/16] fill-white">
+                                                                    <use xlink:href="#arrow"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute right-0 bottom-0 w-full sm:block hidden z-[1]">
+                                <a data-text-rotate-anime-root data-underline-anime2-root href="/ja/product" class="text-white absolute right-0 bottom-0 	font-shippori kerning font-size-16 sm:font-size-21 tracking-[0.05em] leading-[1] py-fluid-24 px-fluid-32 mb-[4px]">
+                                    <span data-text-rotate-anime-target class="block" style="--text-shadow-color-default: var(--color-white); --text-shadow-color-hover: var(--color-white);">詳しく見る
+				</span>
+                                    <div data-underline-anime2-target class="[&::before]:h-[4px] [&::after]:h-[4px]" style="--underline-color: var(--color-white);--hoverd-underline-color: var(--color-white);"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div x-data="sectionParallax('#home-news',false)" class="w-fluid-315 mx-auto __mt-[-20vh] " :class="{'relative z-[2]': $store.status.isXandLine}">
+                            <ul data-home-works-parallax-image-trigger>
+                                <li data-home-works-section-trigger class="relative aspect-[310/400] sm:aspect-[310/900] last:aspect-auto  w-full flex flex-col items-center _justify-center">
+                                    <div class="absolute inset-0 w-full h-full opacity-[0] pointer-events-none" style="background-color: var(--color-blue)"></div>
+                                    <a href="#" class="w-full hover:cursor-pointer" @mouseenter="handleHover(0)" @mouseleave="handleLeave()">
+                                        <span class="hidden sm:block sr-only">BiNet SDK</span>
+                                        <div class="relative aspect-[315/420] overflow-hidden w-[50%] sm-only:mx-auto  sm:w-fluid-315 ">
+                                            <img x-data="addClass" data-class-name="is-show" data-home-works-image class="absolute inset-0 m-auto h-full w-full object-cover backface-hidden" src="wp/wp-content/themes/matsuo/assets/images/pardes/showcase-1.svg" alt="" decoding="async"/>
+                                        </div>
+                                        <div id="home-works-sp" class="sm:hidden flex justify-center mt-fluid-10">
+                                            <div class="font-shippori kerning font-size-16  tracking-[0.05em] leading-[1.5] flex justify-between items-center pb-fluid-11 sm:pb-fluid-20" data-text-rotate-anime-root data-arrow-slide-in-anime-root>
+                                                <span data-text-rotate-anime-target class="block __text-white overflow-hidden whitespace-nowrap text-ellipsis max-w-[15.3em] " style="--text-shadow-color-hover: var(--color-white);--text-shadow-color-default: var(--color-white);">BiNet SDK
+										</span>
+                                                <div class="arrow-slide-in | shrink-0 box-content overflow-hidden color-red pl-fluid-10 w-fluid-15 ">
+                                                    <div class="arrow-slide-in-inner | flex relative justify-center items-center">
+                                                        <svg class="arrow-slide-in__icon -arrow-1 | w-full aspect-[20/16] fill-white">
+                                                            <use xlink:href="#arrow"></use>
+                                                        </svg>
+                                                        <svg class="arrow-slide-in__icon -arrow-2 | w-full aspect-[20/16] fill-white">
+                                                            <use xlink:href="#arrow"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li data-home-works-section-trigger class="relative aspect-[310/400] sm:aspect-[310/900] last:aspect-auto  w-full flex flex-col items-center _justify-center">
+                                    <div class="absolute inset-0 w-full h-full opacity-[0] pointer-events-none" style="background-color: var(--color-green)"></div>
+                                    <a href="#" class="w-full hover:cursor-pointer" @mouseenter="handleHover(1)" @mouseleave="handleLeave()">
+                                        <span class="hidden sm:block sr-only">BiNet Binary Module</span>
+                                        <div class="relative aspect-[315/420] overflow-hidden w-[50%] sm-only:mx-auto  sm:w-fluid-315 ">
+                                            <img x-data="addClass" data-class-name="is-show" data-home-works-image class="absolute inset-0 m-auto h-full w-full object-cover backface-hidden" src="wp/wp-content/themes/matsuo/assets/images/pardes/showcase-2.svg" alt="" decoding="async"/>
+                                        </div>
+                                        <div id="home-works-sp" class="sm:hidden flex justify-center mt-fluid-10">
+                                            <div class="font-shippori kerning font-size-16  tracking-[0.05em] leading-[1.5] flex justify-between items-center pb-fluid-11 sm:pb-fluid-20" data-text-rotate-anime-root data-arrow-slide-in-anime-root>
+                                                <span data-text-rotate-anime-target class="block __text-white overflow-hidden whitespace-nowrap text-ellipsis max-w-[15.3em] " style="--text-shadow-color-hover: var(--color-white);--text-shadow-color-default: var(--color-white);">BiNet Binary Module
+										</span>
+                                                <div class="arrow-slide-in | shrink-0 box-content overflow-hidden color-red pl-fluid-10 w-fluid-15 ">
+                                                    <div class="arrow-slide-in-inner | flex relative justify-center items-center">
+                                                        <svg class="arrow-slide-in__icon -arrow-1 | w-full aspect-[20/16] fill-white">
+                                                            <use xlink:href="#arrow"></use>
+                                                        </svg>
+                                                        <svg class="arrow-slide-in__icon -arrow-2 | w-full aspect-[20/16] fill-white">
+                                                            <use xlink:href="#arrow"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li data-home-works-section-trigger class="relative aspect-[310/400] sm:aspect-[310/900] last:aspect-auto  w-full flex flex-col items-center _justify-center">
+                                    <div class="absolute inset-0 w-full h-full opacity-[0] pointer-events-none" style="background-color: var(--color-orange)"></div>
+                                    <a href="#" class="w-full hover:cursor-pointer" @mouseenter="handleHover(2)" @mouseleave="handleLeave()">
+                                        <span class="hidden sm:block sr-only">Custom Integration</span>
+                                        <div class="relative aspect-[315/420] overflow-hidden w-[50%] sm-only:mx-auto  sm:w-fluid-315 ">
+                                            <img x-data="addClass" data-class-name="is-show" data-home-works-image class="absolute inset-0 m-auto h-full w-full object-cover backface-hidden" src="wp/wp-content/themes/matsuo/assets/images/pardes/showcase-3.svg" alt="" decoding="async"/>
+                                        </div>
+                                        <div id="home-works-sp" class="sm:hidden flex justify-center mt-fluid-10">
+                                            <div class="font-shippori kerning font-size-16  tracking-[0.05em] leading-[1.5] flex justify-between items-center pb-fluid-11 sm:pb-fluid-20" data-text-rotate-anime-root data-arrow-slide-in-anime-root>
+                                                <span data-text-rotate-anime-target class="block __text-white overflow-hidden whitespace-nowrap text-ellipsis max-w-[15.3em] " style="--text-shadow-color-hover: var(--color-white);--text-shadow-color-default: var(--color-white);">Custom Integration
+										</span>
+                                                <div class="arrow-slide-in | shrink-0 box-content overflow-hidden color-red pl-fluid-10 w-fluid-15 ">
+                                                    <div class="arrow-slide-in-inner | flex relative justify-center items-center">
+                                                        <svg class="arrow-slide-in__icon -arrow-1 | w-full aspect-[20/16] fill-white">
+                                                            <use xlink:href="#arrow"></use>
+                                                        </svg>
+                                                        <svg class="arrow-slide-in__icon -arrow-2 | w-full aspect-[20/16] fill-white">
+                                                            <use xlink:href="#arrow"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="home-works-last-section-space" class="h-[30vh] sm:h-screen  w-full" :class="{'!h-[40vh]': $store.status.isXandLine }"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sm:hidden sticky top-0 w-full  mt-[-100vh] | h-[var(--full-height)] sm:h-screen " :style="`--full-height: ${$store.status.fullHeight}px;`" :class="{'z-[1]': $store.status.isXandLine}">
+                            <div class="absolute right-0 bottom-0 w-full ">
+                                <a data-text-rotate-anime-root data-underline-anime2-root href="/ja/product" class="text-white absolute right-0 bottom-0 	font-shippori kerning font-size-16 sm:font-size-21 tracking-[0.05em] leading-[1] py-fluid-24 px-fluid-32 mb-[4px]">
+                                    <span data-text-rotate-anime-target class="block" style="--text-shadow-color-default: var(--color-white); --text-shadow-color-hover: var(--color-white);">詳しく見る
+				</span>
+                                    <div data-underline-anime2-target class="[&::before]:h-[4px] [&::after]:h-[4px]" style="--underline-color: var(--color-white);--hoverd-underline-color: var(--color-white);"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="home-news" x-data="{ selectedTab: 'tab0' }" class="sm:l-container bg-white relative " :class="{'z-[3]': $store.status.isX}">
+                    <div class="sm:hidden sm-only:l-container">
+                        <h2 class="text-en-heading-md pt-fluid-20 sm:pt-fluid-28 ">News
+</h2>
+                    </div>
+                    <div class="sm:flex mt-fluid-52 sm:mt-0 ">
+                        <div class="sm-only:overflow-x-auto relative sm:w-col-12 shrink-0 hidden-scrollbar " :class="{ '__pointer-event-none': $store.status.mobile }" :data-lenis-prevent="$store.status.mobile ? '' : null">
+                            <div class="sticky-element sm:sticky top-0 --sm:pt-fluid-100 --sm:-mt-fluid-100">
+                                <div class="sm:block hidden sm-only:l-container mb-fluid-95">
+                                    <h2 class="text-en-heading-md pt-fluid-20 sm:pt-fluid-28 ">News
+</h2>
+                                </div>
+                                <div x-data="activeTabMarker" class="
+					font-shippori font-size-15 leading-[1.5] tracking-[0.02em] sm:font-size-21
+					sm-only:border-b sm-only:border-black20 sm:border-l relative sm-only:inline-flex sm-only:px-fluid-10" x-on:keydown.right.prevent="$focus.wrap().next()" x-on:keydown.left.prevent="$focus.wrap().previous()" role="tablist" aria-label="tab options">
+                                    <div data-active-tab-marker class="sm:block hidden absolute bottom-0 top-0 left-0 w-fluid-3 h-fit bg-blue ml-[-1px]">
+                                        <div class="py-fluid-10 leading-[1]">
+                                            <span class="opacity-0">|</span>
+                                        </div>
+                                    </div>
+                                    <button data-active-tab-marker-target data-text-rotate-anime-root x-on:click="selectedTab = 'tab0'; $dispatch('tab-changed')" x-bind:aria-selected="selectedTab === 'tab0'" x-bind:tabindex="selectedTab === 'tab0' ? '0' : '-1'" class="home-news-tab" x-bind:class="{ 'is-active': selectedTab === 'tab0', 'pointer-events-none': selectedTab === 'tab0' }" type="button" role="tab" aria-controls="tabpanel0" x-bind:style="{'--underline-color': 'var(--color-blue)'}">
+                                        <div data-text-rotate-anime-target class="home-news-tab__inner" x-bind:style="{ '--text-shadow-color-hover': 'var(--color-blue)', '--text-shadow-color-default': selectedTab === 'tab0' ? 'var(--color-blue)' : 'var(--color-gray)' }">すべて
+							</div>
+                                    </button>
+                                    <button data-active-tab-marker-target data-text-rotate-anime-root x-on:click="selectedTab = 'tab1'; $dispatch('tab-changed')" x-bind:aria-selected="selectedTab === 'tab1'" x-bind:tabindex="selectedTab === 'tab1' ? '0' : '-1'" class="home-news-tab" x-bind:class="{ 'is-active': selectedTab === 'tab1', 'pointer-events-none': selectedTab === 'tab1' }" type="button" role="tab" aria-controls="tabpanel1" x-bind:style="{'--underline-color': 'var(--color-green)'}">
+                                        <div data-text-rotate-anime-target class="home-news-tab__inner" x-bind:style="{ '--text-shadow-color-hover': 'var(--color-green)', '--text-shadow-color-default': selectedTab === 'tab1' ? 'var(--color-green)' : 'var(--color-gray)' }">マイルストーン
+							</div>
+                                    </button>
+                                    <button data-active-tab-marker-target data-text-rotate-anime-root x-on:click="selectedTab = 'tab2'; $dispatch('tab-changed')" x-bind:aria-selected="selectedTab === 'tab2'" x-bind:tabindex="selectedTab === 'tab2' ? '0' : '-1'" class="home-news-tab" x-bind:class="{ 'is-active': selectedTab === 'tab2', 'pointer-events-none': selectedTab === 'tab2' }" type="button" role="tab" aria-controls="tabpanel2" x-bind:style="{'--underline-color': 'var(--color-orange)'}">
+                                        <div data-text-rotate-anime-target class="home-news-tab__inner" x-bind:style="{ '--text-shadow-color-hover': 'var(--color-orange)', '--text-shadow-color-default': selectedTab === 'tab2' ? 'var(--color-orange)' : 'var(--color-gray)' }">採用
+							</div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full sm:mt-fluid-118">
+                            <div class="sm-only:overflow-x-auto hidden-scrollbar " x-show="selectedTab === 'tab0'" id="tabpanel0" role="tabpanel" aria-label="tab0" :data-lenis-prevent="$store.status.mobile ? '' : null" :class="{ '__pointer-event-none': $store.status.mobile }">
+                                <ul class="
+					sm-only:inline-flex sm-only:px-fluid-10 sm-only:mt-fluid-38
+					gap-x-fluid-2 gap-y-fluid-48
+					sm:grid sm:grid-cols-3 sm:gap-y-fluid-56 sm:-mx-fluid-10">
+                                    <li class="sm-only:inline-flex sm-only:w-[72vw]">
+                                        <a href="#" target="_self" class="news-item | relative w-full h-full block" data-arrow-anime-root>
+                                            <div class="news-item__bg | absolute top-0 inset-x-0 w-full h-full bg-lightgray2 rounded-[4px]"></div>
+                                            <div class="p-fluid-10 sm:p-fluid-14 relative z-[1] font-kozuka font-size-12 sm:font-size-16">
+                                                <div class="news-item__image-wrapper | relative aspect-[315/210] overflow-hidden rounded-[4px]">
+                                                    <img class="news-item__image | absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/news-placeholder.svg" alt="コーポレートサイトを公開しました" decoding="async"/>
+                                                </div>
+                                                <p class="mt-fluid-12  tracking-[0.05em] leading-[1.6] kerning relative ">
+                                                    <span aria-hidden="true" class="news-item__title | text-transparent absolute top-0 left-0 inline-block select-none underline decoration-black decoration-1">コーポレートサイトを公開しました</span>
+                                                    <span>コーポレートサイトを公開しました</span>
+                                                </p>
+                                                <div class="flex flex-wrap items-center mt-fluid-12 sm:mt-fluid-15 text-black60">
+                                                    <p>メディア掲載
+                        </p>
+                                                    <span class="px-fluid-4 sm:px-fluid-8">/</span>
+                                                    <time datetime="2026-07-21" class=" tracking-[0.03em] leading-[1.6] kerning ">2026.07.21</time>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sm-only:overflow-x-auto hidden-scrollbar" x-show="selectedTab === 'tab1'" id="tabpanel1" role="tabpanel" aria-label="tab1" :data-lenis-prevent="$store.status.mobile ? '' : null" :class="{ 'pointer-event-none': $store.status.mobile }">
+                                <p class="font-kozuka font-size-14 sm:font-size-16 text-black60 py-fluid-40">現在お知らせはありません。</p>
+                            </div>
+                            <div class="sm-only:overflow-x-auto hidden-scrollbar" x-show="selectedTab === 'tab2'" id="tabpanel2" role="tabpanel" aria-label="tab2" :data-lenis-prevent="$store.status.mobile ? '' : null" :class="{ 'pointer-event-none': $store.status.mobile }">
+                                <p class="font-kozuka font-size-14 sm:font-size-16 text-black60 py-fluid-40">現在お知らせはありません。</p>
+                            </div>
+                            <div class="flex justify-end mt-fluid-30 sm:mt-fluid-60 sm-only:l-container">
+                                <a data-text-rotate-anime-root data-underline-anime2-root href="/ja/news" class="inline-block font-shippori kerning font-size-16 sm:font-size-21 tracking-[0.05em] leading-[1] py-fluid-15">
+                                    <span data-text-rotate-anime-target class="block" style="--text-shadow-color-default: var(--color-black); --text-shadow-color-hover: var(--color-blue);">お知らせ一覧を見る
+						</span>
+                                    <div data-underline-anime2-target style="--underline-color: var(--color-black);--hoverd-underline-color: var(--color-blue);"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="home-recruit" class="mt-fluid-84 sm:mt-fluid-148">
+                    <div class="l-container">
+                        <h2 class="text-en-heading-md pt-fluid-20 sm:pt-fluid-28 ">Recruit
+</h2>
+                        <div class="mt-[-0.85em] sm:mt-[-0.65em] font-en kerning font-size-48 sm:font-size-120 ">
+                            <div class="" aria-hidden="true">
+                                <div class="text-gray inline-table leading-[0.9] sm:leading-[0.8]">
+                                    <span class="text-split-anime first:ml-[1.35em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.00s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.00s" class="visibility-hidden">W
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.35em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.02s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.02s" class="visibility-hidden">o
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.35em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.04s; color: var(--color-black);" data-dir="3" data-show="bottom">
+                                        <span style="transition-delay:0.04s" class="visibility-hidden">r
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.35em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.06s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.06s" class="visibility-hidden">k
+							</span>
+                                    </span>
+                                    <br/>
+                                    <span class="text-split-anime first:ml-[1.35em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.08s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.08s" class="visibility-hidden">W
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.35em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.10s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.10s" class="visibility-hidden">i
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.35em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.12s; color: var(--color-black);" data-dir="3" data-show="bottom">
+                                        <span style="transition-delay:0.12s" class="visibility-hidden">t
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.35em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.14s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.14s" class="visibility-hidden">h
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.35em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.16s;" data-dir="3" data-show="bottom">
+                                        <span style="transition-delay:0.16s" class="visibility-hidden">&nbsp;</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.35em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.18s; color: var(--color-black);" data-dir="2" data-show="bottom">
+                                        <span style="transition-delay:0.18s" class="visibility-hidden">U
+							</span>
+                                    </span>
+                                    <span class="text-split-anime first:ml-[1.35em] sm:first:ml-[0.75em]" x-data="addClass" data-class-name="is-view" style="transition-delay:0.20s; color: var(--color-black);" data-dir="1" data-show="bottom">
+                                        <span style="transition-delay:0.20s" class="visibility-hidden">s
+							</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sr-only">Work With Us</div>
+                        </div>
+                    </div>
+                    <div class="relative mt-fluid-20 sm:mt-fluid-50  overflow-clip">
+                        <div class="w-full absolute top-0 z-[1] ">
+                            <div class="text-en-heading-md text-center mt-fluid-20 sm:mt-fluid-30 text-white">Message</div>
+                            <div class="relative mt-fluid-30 sm:mt-fluid-60 px-col-2 sm:px-col-6 text-center">
+                                <p class="font-shippori kerning font-size-20 sm:font-size-32 tracking-[0.05em] leading-[1.8] text-white">
+                                    自由意志を持つ汎用人工知能の実現という、<br class="sm:hidden">世界的にも類を見ない挑戦に、<br>少数精鋭のチームで取り組んでいます。
+                                </p>
+                            </div>
+                        <div class="sm-only:aspect-[375/750] sm:h-screen sticky top-0 w-full z-[2] pointer-events-none border-[2px] border-transparent " data-home-recruit-parallax-splide-container>
+                                <div class="splide | bottom-fluid-116 sm:bottom-fluid-50 | w-fit mx-auto absolute inset-x-0 pointer-events-auto" role="group" aria-label="採用ページ" :class="{'!bottom-fluid-10 ': $store.status.isX}">
+                                    <div class="splide__arrows | inline-flex items-center  bg-darkgray90 rounded-full  h-fluid-56 w-full">
+                                        <button class="splide__arrow splide__arrow--prev | z-[1] relative w-fluid-30 h-fluid-30 ml-fluid-10 rounded-full bg-darkgray2_80 flex justify-center items-center shrink-0">
+                                            <svg class="w-fluid-12 aspect-[20/16] fill-white rotate-180">
+                                                <use xlink:href="#arrow"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="pl-fluid-10 pr-fluid-30 overflow-hidden">
+                                            <div class="splide__track  | !overflow-visible  w-fluid-97 ">
+                                                <ul class="splide__list | " style="  transform:translate3d(0,0,0);">
+                                                    <li style="z-index: 56;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">0</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 55;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">1</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 54;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">2</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 53;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">3</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 52;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">4</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 51;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">5</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 50;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">6</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 49;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">7</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 48;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">8</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 47;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">9</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 46;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">10</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 45;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">11</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 44;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">12</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 43;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">13</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 42;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">14</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 41;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">15</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 40;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">16</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 39;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">17</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 38;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">18</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 37;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">19</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 36;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">20</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 35;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">21</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 34;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">22</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 33;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">23</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 32;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">24</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 31;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">25</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 30;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">26</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 29;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">27</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 28;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">28</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 27;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">29</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 26;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">30</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 25;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">31</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 24;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">32</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 23;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">33</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 22;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">34</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 21;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">35</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 20;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">36</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 19;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">37</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 18;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">38</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 17;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">39</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 16;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">40</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 15;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">41</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 14;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">42</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 13;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">43</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 12;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">44</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 11;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">45</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 10;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">46</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 9;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">47</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 8;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">48</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 7;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">49</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 6;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">50</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 5;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">51</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 4;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">52</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-1.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 3;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">53</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-2.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 2;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">54</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-3.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                    <li style="z-index: 1;transform:translate3d(0,0,1px);" class="splide__slide | !w-fluid-36  ">
+                                                        <div class="splide__slide_image | relative aspect-[1/1] w-full">
+                                                            <div class="absolute inset-0 m-auto z-[2] h-[1em] w-[2em] opacity-[0]">55</div>
+                                                            <img class="absolute inset-0 m-auto h-full w-full " src="wp/wp-content/themes/matsuo/assets/images/pardes/recruit-thumb-4.svg" alt="" decoding="async"/>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="text-white font-en kerning font-size-16 tracking-[0.01em] leading-[1] mr-fluid-10">
+                                            <span id="home-recruit-bg-index">1</span>
+                                            <span class="px-fluid-3">/</span>
+                                            <span>4</span>
+                                        </div>
+                                        <button class=" splide__arrow splide__arrow--next | z-[1] relative ml-auto w-fluid-30 h-fluid-30 mr-fluid-10 rounded-full bg-darkgray2_80 flex justify-center items-center shrink-0">
+                                            <svg class="w-fluid-12 aspect-[20/16] fill-white ">
+                                                <use xlink:href="#arrow"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="aspect-[375/750] mt-[calc(-100vw*750/375)] sm:aspect-[1400/1500] | sm:mt-[-100vh] relative overflow-hidden w-full " data-home-recruit-parallax-image-container>
+                                <div class=" relative  overflow-hidden w-full visibility-hidden h-full" data-home-recruit-parallax-image-target>
+                                    <div x-ref="webglContainer" class="w-full h-full" data-images='["wp/wp-content/themes/matsuo/assets/images/pardes/recruit-bg-1.svg","wp/wp-content/themes/matsuo/assets/images/pardes/recruit-bg-2.svg","wp/wp-content/themes/matsuo/assets/images/pardes/recruit-bg-3.svg","wp/wp-content/themes/matsuo/assets/images/pardes/recruit-bg-4.svg"]'></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <style>
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                    }
+                </style>
+                <section id="section-contact">
+                    <div class="sm:flex flex-row-reverse">
+                        <template x-if="!$store.status.isSpView">
+                            <div class=" shrink-0 sm:w-col-32 relative">
+                                <div class="absolute top-0 left-0 w-full h-full z-[1] bg-red opacity-[0]"></div>
+                                <div class="relative sm-only:aspect-[1/1] overflow-hidden w-full h-full">
+                                    <div class="relative overflow-hidden w-full h-full">
+                                        <div class="relative aspect-[1/1] overflow-hidden w-full h-full z-[1]">
+                                            <img class="absolute inset-0 m-auto h-full w-full object-cover" src="wp/wp-content/themes/matsuo/assets/images/pardes/contact.svg" alt="" decoding="async"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <div class=" flex-1  bg-lightgray px-col-1">
+                            <h2 class="text-en-heading-md pt-fluid-20 sm:pt-fluid-28 ">Contact
+</h2>
+                            <p class="body-md-kozuka  items-stretch sm:font-size-19  mt-fluid-50 sm:mt-fluid-120">PoCのご相談、採用へのご応募、取材のお問い合わせなど、お気軽にご連絡ください。
+			</p>
+                            <div class="mt-fluid-62 sm:mt-fluid-122 pb-fluid-38 sm:pb-fluid-60">
+                                <div class="">
+                                    <div class="">
+                                        <h3 class="font-shippori kerning font-size-13 sm:font-size-15 tracking-[0.05em] leading-[1] border-b border-[var(--title-underline-color)] pb-fluid-10 mb-fluid-18" style="
+			--title-underline-color: var(--color-black10);
+			--text-shadow-color-default:var(--color-black);
+			--text-shadow-color-hover: var(--color-black);
+			--underline-color: var(--color-black);
+			--hoverd-underline-color: var(--color-black);
+		">各種お問い合わせ</h3>
+                                        <ul class="sm:mt-fluid-25 [&_li+li]:mt-fluid-10">
+                                            <li>
+                                                <p class="font-en kerning font-size-13 sm:font-size-15 tracking-[0.06em] leading-[2.2]">PoC
+													inquiries
+
+					</p>
+                                                <a href="/ja/contact" class="font-shippori kerning font-size-18 sm:font-size-25 tracking-[0.05em] leading-[1.5] flex justify-between items-center pb-fluid-11 sm:pb-fluid-20" data-text-rotate-anime-root data-underline-anime2-root data-arrow-slide-in-anime-root style="
+			--title-underline-color: var(--color-black10);
+			--text-shadow-color-default:var(--color-black);
+			--text-shadow-color-hover: var(--color-black);
+			--underline-color: var(--color-black);
+			--hoverd-underline-color: var(--color-black);
+		">
+                                                    <span data-text-rotate-anime-target class="block" style="">PoCのご相談
+						</span>
+                                                    <div class="arrow-slide-in | shrink-0 box-content overflow-hidden color-red pl-fluid-10 w-fluid-15 sm:w-fluid-20 ">
+                                                        <div class="arrow-slide-in-inner | flex relative justify-center items-center">
+                                                            <svg class="arrow-slide-in__icon -arrow-1 | w-full aspect-[20/16] fill-black">
+                                                                <use xlink:href="#arrow"></use>
+                                                            </svg>
+                                                            <svg class="arrow-slide-in__icon -arrow-2 | w-full aspect-[20/16] fill-black">
+                                                                <use xlink:href="#arrow"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div data-underline-anime2-target style="
+			--title-underline-color: var(--color-black10);
+			--text-shadow-color-default:var(--color-black);
+			--text-shadow-color-hover: var(--color-black);
+			--underline-color: var(--color-black);
+			--hoverd-underline-color: var(--color-black);
+		"></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <p class="font-en kerning font-size-13 sm:font-size-15 tracking-[0.06em] leading-[2.2]">Career
+																		applications
+					</p>
+                                                <a href="/ja/recruit" class="font-shippori kerning font-size-18 sm:font-size-25 tracking-[0.05em] leading-[1.5] flex justify-between items-center pb-fluid-11 sm:pb-fluid-20" data-text-rotate-anime-root data-underline-anime2-root data-arrow-slide-in-anime-root style="
+			--title-underline-color: var(--color-black10);
+			--text-shadow-color-default:var(--color-black);
+			--text-shadow-color-hover: var(--color-black);
+			--underline-color: var(--color-black);
+			--hoverd-underline-color: var(--color-black);
+		">
+                                                    <span data-text-rotate-anime-target class="block" style="">採用のご応募
+						</span>
+                                                    <div class="arrow-slide-in | shrink-0 box-content overflow-hidden color-red pl-fluid-10 w-fluid-15 sm:w-fluid-20 ">
+                                                        <div class="arrow-slide-in-inner | flex relative justify-center items-center">
+                                                            <svg class="arrow-slide-in__icon -arrow-1 | w-full aspect-[20/16] fill-black">
+                                                                <use xlink:href="#arrow"></use>
+                                                            </svg>
+                                                            <svg class="arrow-slide-in__icon -arrow-2 | w-full aspect-[20/16] fill-black">
+                                                                <use xlink:href="#arrow"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div data-underline-anime2-target style="
+			--title-underline-color: var(--color-black10);
+			--text-shadow-color-default:var(--color-black);
+			--text-shadow-color-hover: var(--color-black);
+			--underline-color: var(--color-black);
+			--hoverd-underline-color: var(--color-black);
+		"></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <p class="font-en kerning font-size-13 sm:font-size-15 tracking-[0.06em] leading-[2.2]">Media
+																		inquiries
+					</p>
+                                                <a href="/ja/contact" class="font-shippori kerning font-size-18 sm:font-size-25 tracking-[0.05em] leading-[1.5] flex justify-between items-center pb-fluid-11 sm:pb-fluid-20" data-text-rotate-anime-root data-underline-anime2-root data-arrow-slide-in-anime-root style="
+			--title-underline-color: var(--color-black10);
+			--text-shadow-color-default:var(--color-black);
+			--text-shadow-color-hover: var(--color-black);
+			--underline-color: var(--color-black);
+			--hoverd-underline-color: var(--color-black);
+		">
+                                                    <span data-text-rotate-anime-target class="block" style="">取材のお問い合わせ
+						</span>
+                                                    <div class="arrow-slide-in | shrink-0 box-content overflow-hidden color-red pl-fluid-10 w-fluid-15 sm:w-fluid-20 ">
+                                                        <div class="arrow-slide-in-inner | flex relative justify-center items-center">
+                                                            <svg class="arrow-slide-in__icon -arrow-1 | w-full aspect-[20/16] fill-black">
+                                                                <use xlink:href="#arrow"></use>
+                                                            </svg>
+                                                            <svg class="arrow-slide-in__icon -arrow-2 | w-full aspect-[20/16] fill-black">
+                                                                <use xlink:href="#arrow"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div data-underline-anime2-target style="
+			--title-underline-color: var(--color-black10);
+			--text-shadow-color-default:var(--color-black);
+			--text-shadow-color-hover: var(--color-black);
+			--underline-color: var(--color-black);
+			--hoverd-underline-color: var(--color-black);
+		"></div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="bg-black px-col-1 pt-fluid-16 sm:pt-fluid-24 pb-fluid-20 sm:pb-fluid-50">
+                <div class="relative border-t-[1px]">
+                    <a class="block w-fluid-48 sm:w-fluid-78 absolute top-0 left-0" href="/ja">
+                        <span class="sr-only">Pardes Inc.</span>
+                        <img class=" w-full" src="wp/wp-content/themes/matsuo/assets/images/pardes/wordmark.svg" alt="" decoding="async"/>
+                    </a>
+                    <img class="w-fluid-118 sm:w-fluid-372  absolute  -bottom-fluid-3 sm:-bottom-fluid-2 right-fluid-9 sm:right-fluid-20" src="wp/wp-content/themes/matsuo/assets/images/pardes/wordmark.svg" alt="" decoding="async"/>
+                    <picture class="block w-full [&>img]:w-full [&>img]:h-full h-[147px] sm:h-[334px]">
+                        <source media="(min-width: 768px)" srcset="wp/wp-content/themes/matsuo/assets/images/footer-line.svg">
+                        <img src="wp/wp-content/themes/matsuo/assets/images/footer-line@sp.svg" alt="">
+                    </picture>
+                </div>
+                <div class="sm:flex flex-row-reverse text-white">
+                    <div class="shrink-0 flex flex-col items-end mt-fluid-23 sm:mt-fluid-30 sm-only:mb-fluid-35">
+                        <div class="sm:block hidden mt-auto">
+                            <a href="/ja/legal/privacy" data-text-rotate-anime-root class="block mt-fluid-25 font-shippori kerning font-size-14 sm:font-size-15 tracking-[0.05em] leading-[2] text-white text-right ">
+                                <div data-text-rotate-anime-target class="leading-[1]" style="--text-shadow-color-default: var(--color-white60); --text-shadow-color-hover: var(--color-white);">プライバシーポリシー</div>
+                            </a>
+                            <p class="mt-fluid-8 text-right font-en kerning font-size-14 sm:font-size-15 tracking-[0.08em] leading-[1.6]">&copy;Pardes Inc.</p>
+                        </div>
+                    </div>
+                    <div class="flex-1 sm:mt-fluid-28">
+                        <div class="sm:flex">
+                            <div class="shrink-0 sm:w-col-12">
+                                <dl>
+                                    <dt>
+                                        <p class="font-en kerning font-size-14 sm:font-size-15 tracking-[0.05em] leading-[2.2]   mb-fluid-3 ">Site map
+			</p>
+                                    </dt>
+                                    <dd class="">
+                                        <ul class="grid grid-cols-2 gap-x-fluid-4 sm:gap-x-fluid-26 gap-y-fluid-4  | font-shippori kerning font-size-14 sm:font-size-15 tracking-[0.01em] leading-[1.25] sm:ml-col-1">
+                                            <li>
+                                                <a data-text-rotate-anime-root href="/ja" class="inline-block">
+                                                    <div data-text-rotate-anime-target style="--text-shadow-color-default: var(--color-white60);--text-shadow-color-hover: var(--color-white);">ホーム</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-text-rotate-anime-root href="/ja/product" class="inline-block">
+                                                    <div data-text-rotate-anime-target style="--text-shadow-color-default: var(--color-white60);--text-shadow-color-hover: var(--color-white);">製品説明</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-text-rotate-anime-root href="/ja/business" class="inline-block">
+                                                    <div data-text-rotate-anime-target style="--text-shadow-color-default: var(--color-white60);--text-shadow-color-hover: var(--color-white);">事業紹介</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-text-rotate-anime-root href="/ja/news" class="inline-block">
+                                                    <div data-text-rotate-anime-target style="--text-shadow-color-default: var(--color-white60);--text-shadow-color-hover: var(--color-white);">お知らせ</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-text-rotate-anime-root href="/ja/recruit" class="inline-block">
+                                                    <div data-text-rotate-anime-target style="--text-shadow-color-default: var(--color-white60);--text-shadow-color-hover: var(--color-white);">採用情報</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-text-rotate-anime-root href="/ja/company" class="inline-block">
+                                                    <div data-text-rotate-anime-target style="--text-shadow-color-default: var(--color-white60);--text-shadow-color-hover: var(--color-white);">会社概要</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                        <div class="sm:flex sm:mt-fluid-23">
+                            <div class="">
+                                <dl>
+                                    <dt>
+                                        <p class="font-en kerning font-size-14 sm:font-size-15 tracking-[0.05em] leading-[2.2]   mb-fluid-3 sm-only:mt-fluid-45">Contact
+			</p>
+                                    </dt>
+                                    <dd class=" sm:ml-col-1">
+                                        <ul class="-mt-fluid-5">
+                                            <li>
+                                                <a data-text-rotate-anime-root href="/ja/contact" class="inline-flex gap-fluid-4 sm:gap-fluid-6 py-[0.22em] sm:py-[0.25em] items-center">
+                                                    <div class="font-shippori kerning font-size-14 sm:font-size-15leading-[1]  " data-text-rotate-anime-target style="--text-shadow-color-default: var(--color-white60);--text-shadow-color-hover: var(--color-white);">お問い合わせフォーム
+											</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="sm:hidden">
+                            <a href="/ja/legal/privacy" data-text-rotate-anime-root class="block mt-fluid-25 font-shippori kerning font-size-14 sm:font-size-15 tracking-[0.05em] leading-[2] text-white text-right ">
+                                <div data-text-rotate-anime-target class="leading-[1]" style="--text-shadow-color-default: var(--color-white60); --text-shadow-color-hover: var(--color-white);">プライバシーポリシー</div>
+                            </a>
+                            <p class="mt-fluid-8 text-right font-en kerning font-size-14 sm:font-size-15 tracking-[0.08em] leading-[1.6]">&copy;Pardes Inc.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div id="js-overlay-container"></div>
+        <script type="speculationrules">
+            {
+                "prefetch": [
+                    {
+                        "source": "document",
+                        "where": {
+                            "and": [
+                                {
+                                    "href_matches": "/*"
+                                },
+                                {
+                                    "not": {
+                                        "href_matches": [
+                                            "/wp/wp-*.php",
+                                            "/wp/wp-admin/*",
+                                            "/wp/wp-content/uploads/*",
+                                            "/wp/wp-content/*",
+                                            "/wp/wp-content/plugins/*",
+                                            "/wp/wp-content/themes/matsuo/*",
+                                            "/*\\?(.+)"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "not": {
+                                        "selector_matches": "a[rel~=\"nofollow\"]"
+                                    }
+                                },
+                                {
+                                    "not": {
+                                        "selector_matches": ".no-prefetch, .no-prefetch a"
+                                    }
+                                }
+                            ]
+                        },
+                        "eagerness": "conservative"
+                    }
+                ]
+            }</script>
+        <script id="wp-emoji-settings" type="application/json">
+            {
+                "baseUrl": "https://s.w.org/images/core/emoji/17.0.2/72x72/",
+                "ext": ".png",
+                "svgUrl": "https://s.w.org/images/core/emoji/17.0.2/svg/",
+                "svgExt": ".svg",
+                "source": {
+                    "concatemoji": "wp/wp-includes/js/wp-emoji-release.min.js?ver=7.0.2"
+                }
+            }</script>
+        <script type="module">
+            /*! This file is auto-generated */
+            const a = JSON.parse(document.getElementById("wp-emoji-settings").textContent)
+              , o = (window._wpemojiSettings = a,
+            "wpEmojiSettingsSupports")
+              , s = ["flag", "emoji"];
+            function i(e) {
+                try {
+                    var t = {
+                        supportTests: e,
+                        timestamp: (new Date).valueOf()
+                    };
+                    sessionStorage.setItem(o, JSON.stringify(t))
+                } catch (e) {}
+            }
+            function c(e, t, n) {
+                e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+                e.fillText(t, 0, 0);
+                t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);
+                e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+                e.fillText(n, 0, 0);
+                const a = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);
+                return t.every( (e, t) => e === a[t])
+            }
+            function p(e, t) {
+                e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+                e.fillText(t, 0, 0);
+                var n = e.getImageData(16, 16, 1, 1);
+                for (let e = 0; e < n.data.length; e++)
+                    if (0 !== n.data[e])
+                        return !1;
+                return !0
+            }
+            function u(e, t, n, a) {
+                switch (t) {
+                case "flag":
+                    return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\udde8\ud83c\uddf6", "\ud83c\udde8\u200b\ud83c\uddf6") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");
+                case "emoji":
+                    return !a(e, "\ud83e\u1fac8")
+                }
+                return !1
+            }
+            function f(e, t, n, a) {
+                let r;
+                const o = (r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300,150) : document.createElement("canvas")).getContext("2d", {
+                    willReadFrequently: !0
+                })
+                  , s = (o.textBaseline = "top",
+                o.font = "600 32px Arial",
+                {});
+                return e.forEach(e => {
+                    s[e] = t(o, e, n, a)
+                }
+                ),
+                s
+            }
+            function r(e) {
+                var t = document.createElement("script");
+                t.src = e,
+                t.defer = !0,
+                document.head.appendChild(t)
+            }
+            a.supports = {
+                everything: !0,
+                everythingExceptFlag: !0
+            },
+            new Promise(t => {
+                let n = function() {
+                    try {
+                        var e = JSON.parse(sessionStorage.getItem(o));
+                        if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests)
+                            return e.supportTests
+                    } catch (e) {}
+                    return null
+                }();
+                if (!n) {
+                    if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob)
+                        try {
+                            var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), c.toString(), p.toString()].join(",") + "));"
+                              , a = new Blob([e],{
+                                type: "text/javascript"
+                            });
+                            const r = new Worker(URL.createObjectURL(a),{
+                                name: "wpTestEmojiSupports"
+                            });
+                            return void (r.onmessage = e => {
+                                i(n = e.data),
+                                r.terminate(),
+                                t(n)
+                            }
+                            )
+                        } catch (e) {}
+                    i(n = f(s, u, c, p))
+                }
+                t(n)
+            }
+            ).then(e => {
+                for (const n in e)
+                    a.supports[n] = e[n],
+                    a.supports.everything = a.supports.everything && a.supports[n],
+                    "flag" !== n && (a.supports.everythingExceptFlag = a.supports.everythingExceptFlag && a.supports[n]);
+                var t;
+                a.supports.everythingExceptFlag = a.supports.everythingExceptFlag && !a.supports.flag,
+                a.supports.everything || ((t = a.source || {}).concatemoji ? r(t.concatemoji) : t.wpemoji && t.twemoji && (r(t.twemoji),
+                r(t.wpemoji)))
+            }
+            );
+            //# sourceURL=wp/wp-includes/js/wp-emoji-loader.min.js
+        </script>
+        <div class="z-[-1] sticky"></div>
+        <div class="absolute pointer-events-none h-svh" x-ref="svh" x-resize="$store.status.updateHeight"></div>
+        <div class="absolute pointer-events-none h-lvh" x-ref="lvh"></div>
+    </div>
+</body>
+</html>

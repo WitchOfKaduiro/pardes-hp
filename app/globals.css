@@ -1,0 +1,1165 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/*
+ * 流体レイアウトシステム（松尾工務店サイトの実装を調査し、同じ手法を採用）。
+ * モバイル基準幅375px・デスクトップ基準幅1400px の2段階で、
+ * ビューポート幅に対して連続的にスケールする値を calc()/clamp() で生成する。
+ * ブレークポイントは同サイトに合わせ768pxを採用。
+ * 参照: reference/matsuo-komuten-mirror （画像・コピー・コードは流用せず、
+ * この数値スケーリング手法とブレークポイント設計のみを踏襲）。
+ */
+:root {
+  --font-size-base: 16;
+  --effective-viewport-width: 100vw;
+  --screen-size: 375;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --screen-size: 1400;
+  }
+}
+
+@theme {
+  --breakpoint-sm: 48rem;
+
+  /*
+   * 参照元サイトのビルド済みCSS（wp/wp-content/themes/matsuo/build/index-B4wP8yjM.css、
+   * 未編集のまま）から実際に使われている配色変数をそのまま採用する。
+   * --color-blue: #0068B6 / --color-gray: #868E94 / --color-lightgray2: #E6EAED 等。
+   */
+  --color-bg: #000000;
+  --color-bg-elevated: #232323;
+  --color-bg-elevated-2: #383838;
+  --color-fg: #ffffff;
+  --color-fg-muted: rgba(255, 255, 255, 0.6);
+  --color-fg-subtle: rgba(255, 255, 255, 0.45);
+  --color-accent: #0068b6;
+  --color-accent-dim: #004e82;
+  --color-border: rgba(255, 255, 255, 0.1);
+
+  /*
+   * 参照元サイトの明暗切り替え構成（About us/Works見出し/Newsは白背景、
+   * Hero/Recruit背景/Footerは黒背景）を踏襲するためのライトセクション用トークン。
+   */
+  --color-bg-light: #ffffff;
+  --color-fg-on-light: #000000;
+  --color-fg-muted-on-light: #868e94;
+  --color-border-on-light: #e6eaed;
+
+  --font-sans: var(--font-space-grotesk), "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", sans-serif;
+  /* 参照元サイトの日本語見出し明朝体（Shippori Mincho）相当 */
+  --font-serif-jp: var(--font-shippori-mincho), "Hiragino Mincho ProN", serif;
+  /* 参照元サイトの英語大見出しセリフ体（Reckless Standard XL相当の代替） */
+  --font-serif-en: var(--font-playfair-display), serif;
+  /* 参照元サイトの本文用明朝体（小塚明朝 Pr6N相当の代替）。見出しとは書体を変える */
+  --font-serif-jp-body: var(--font-noto-serif-jp), "Hiragino Mincho ProN", serif;
+
+  /* 流体タイポグラフィ: 下限・上限を持つ clamp()。screen-sizeの2段階切替に連動する */
+  --text-fluid-xs: clamp(0.75rem, calc(13 / var(--screen-size) * 100vw), 0.875rem);
+  --text-fluid-sm: clamp(0.875rem, calc(15 / var(--screen-size) * 100vw), 1rem);
+  --text-fluid-base: clamp(1rem, calc(17 / var(--screen-size) * 100vw), 1.125rem);
+  --text-fluid-lg: clamp(1.125rem, calc(20 / var(--screen-size) * 100vw), 1.5rem);
+  --text-fluid-xl: clamp(1.375rem, calc(28 / var(--screen-size) * 100vw), 2rem);
+  --text-fluid-2xl: clamp(1.75rem, calc(40 / var(--screen-size) * 100vw), 2.75rem);
+  --text-fluid-3xl: clamp(2.25rem, calc(64 / var(--screen-size) * 100vw), 4rem);
+
+  /* 流体スペーシング: 上限を設けず、ビューポートに連続比例させる（松尾工務店の h-fluid-* 技法と同じ） */
+  --spacing-fluid-xs: calc(8 / var(--screen-size) * var(--effective-viewport-width));
+  --spacing-fluid-sm: calc(16 / var(--screen-size) * var(--effective-viewport-width));
+  --spacing-fluid-md: calc(32 / var(--screen-size) * var(--effective-viewport-width));
+  --spacing-fluid-lg: calc(56 / var(--screen-size) * var(--effective-viewport-width));
+  --spacing-fluid-xl: calc(96 / var(--screen-size) * var(--effective-viewport-width));
+
+  /* 松尾工務店サイトのCSSから抽出した主要イージングカーブ */
+  --ease-out-expo: cubic-bezier(0.18, 0.06, 0.23, 1);
+  --ease-out-soft: cubic-bezier(0.16, 0.64, 0.32, 1);
+  --ease-sharp: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-spring: cubic-bezier(0.1, 0.5, 0.2, 1.04);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+/* 狭幅で見出し末尾・本文末尾が一文字だけ取り残される禁則崩れを防ぐ */
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+p, li {
+  text-wrap: pretty;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+/*
+ * business/companyページ（参照元HTML埋め込み）のハンバーガーボタンは
+ * business.html/company.html側で --bg-color / --bg-color--menu-open が
+ * どちらも黒に設定されており、参照CSS(index-B4wP8yjM.css)の
+ * `html.is-static-header-show #hamburger-button [data-hamburger-button-bg]`
+ * 等が --line-color / --bg-color--menu-open を参照して背景色を決定するため、
+ * 白背景のヒーロー上で不透明な黒四角として本文に重なって表示されてしまう。
+ * 3本線(data-hamburger-button-bar)自体には影響を与えず、背景の塗りだけを消す。
+ */
+#hamburger-button [data-hamburger-button-bg] {
+  background-color: transparent !important;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: fade-in-up 0.6s var(--ease-out-expo) both;
+}
+
+@keyframes split-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.4em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.split-char {
+  display: inline-block;
+  white-space: pre;
+}
+
+.split-char-in {
+  animation: split-in 0.5s var(--ease-out-expo) both;
+}
+
+@keyframes split-in-dir {
+  from {
+    opacity: 0;
+    transform: var(--from-transform, translateY(0.4em));
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.split-char-in-dir {
+  animation: split-in-dir 0.6s var(--ease-out-expo) both;
+}
+
+/*
+ * ホバー時のマイクロインタラクション群。参照元サイトの
+ * text-rotate-anime / underline-anime / arrow-slide-in-anime / bg-circle-anime を
+ * 参考にした演出だが、Alpine.jsの実装は流用せず、CSSのみで再構築している。
+ * トリガーは最も近い a / button 要素の :hover, :focus-visible。
+ */
+.hover-flip {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.hover-flip__row {
+  display: block;
+  transition: transform 0.5s var(--ease-out-soft);
+}
+
+.hover-flip__row--dup {
+  position: absolute;
+  inset: 0;
+  transform: translateY(100%);
+}
+
+a:hover .hover-flip__row:not(.hover-flip__row--dup),
+button:hover .hover-flip__row:not(.hover-flip__row--dup),
+a:focus-visible .hover-flip__row:not(.hover-flip__row--dup),
+button:focus-visible .hover-flip__row:not(.hover-flip__row--dup) {
+  transform: translateY(-100%);
+}
+
+a:hover .hover-flip__row--dup,
+button:hover .hover-flip__row--dup,
+a:focus-visible .hover-flip__row--dup,
+button:focus-visible .hover-flip__row--dup {
+  transform: translateY(0);
+}
+
+.hover-underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.15em;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease-out-soft);
+}
+
+a:hover .hover-underline,
+button:hover .hover-underline,
+a:focus-visible .hover-underline,
+button:focus-visible .hover-underline {
+  transform: scaleX(1);
+}
+
+.arrow-slide {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.arrow-slide__icon {
+  display: block;
+  transition: transform 0.5s var(--ease-out-soft), opacity 0.5s var(--ease-out-soft);
+}
+
+.arrow-slide__icon--in {
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+a:hover .arrow-slide__icon:not(.arrow-slide__icon--in),
+a:focus-visible .arrow-slide__icon:not(.arrow-slide__icon--in) {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+a:hover .arrow-slide__icon--in,
+a:focus-visible .arrow-slide__icon--in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.circle-pop {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.circle-pop__bg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 9999px;
+  transform: scale(0);
+  transition: transform 0.6s var(--ease-out-soft);
+  z-index: -1;
+}
+
+a:hover .circle-pop__bg,
+button:hover .circle-pop__bg,
+a:focus-visible .circle-pop__bg,
+button:focus-visible .circle-pop__bg {
+  transform: scale(2.4);
+}
+
+/* オープニングロゴリビール演出。OpeningAnimation.tsx がJS側で再生要否を判定する */
+.opening-anime {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  pointer-events: none;
+  animation: opening-fade-out var(--fade-ms, 0.6s) var(--ease-out-soft) var(--reveal-ms, 1.2s)
+    forwards;
+}
+
+.opening-anime__logo {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 8vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-fg);
+  clip-path: inset(0 100% 0 0);
+  animation: opening-reveal calc(var(--reveal-ms, 1.2s) - 0.2s) var(--ease-out-expo) 0.2s forwards;
+}
+
+@keyframes opening-reveal {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes opening-fade-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Recruitセクションのサムネイル無限ループ（参照元のSplideループカルーセル相当） */
+.marquee {
+  animation: marquee-scroll 24s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none;
+  }
+
+  .split-char-in,
+  .split-char-in-dir {
+    animation: none;
+  }
+
+  .hover-flip__row,
+  .hover-underline,
+  .arrow-slide__icon,
+  .circle-pop__bg {
+    transition: none;
+  }
+
+  .opening-anime,
+  .opening-anime__logo {
+    animation: none;
+  }
+
+  .marquee {
+    animation: none;
+  }
+}
+
+/* The migrated reference page brings its own document shell and runtime. */
+body:has(.pardes-reference-home) [data-site-shell-header],
+body:has(.pardes-reference-home) [data-site-shell-footer],
+body:has(.pardes-reference-home) [data-site-shell-opening] {
+  display: none !important;
+}
+
+body:has(.pardes-reference-home) {
+  display: block;
+  min-height: 0;
+  background: transparent;
+  color: #000;
+}
+
+html:has(.pardes-reference-home) {
+  color-scheme: normal;
+}
+
+body:has(.pardes-reference-home) footer ul.grid > li {
+  height: 1.5em;
+}
+
+@media (min-width: 768px) {
+  body:has(.pardes-reference-home) footer ul.grid > li {
+    height: calc(1.5em + 0.3125px);
+  }
+}
+
+@media (max-width: 767px) {
+  body:has(.pardes-reference-home) .sm\:hidden {
+    display: block;
+  }
+}
+
+/* Representative message inserted between About us and Works on the home page. */
+.pardes-representative-message {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #d6dfde;
+  border-bottom: 1px solid #d6dfde;
+  background: #f3f6f5;
+  color: #080a0b;
+}
+
+.pardes-representative-message__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.68fr);
+  gap: 10vw;
+  align-items: center;
+  padding: 9rem calc(var(--column-unit) * 1) 10rem;
+}
+
+.pardes-representative-message__content {
+  max-width: 44rem;
+}
+
+.pardes-representative-message__eyebrow {
+  margin: 0;
+  color: #1f8f99;
+  font-size: 0.875rem;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pardes-representative-message__heading {
+  margin: 1.25rem 0 0;
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.pardes-representative-message__rule {
+  width: 3.5rem;
+  height: 2px;
+  margin-top: 2rem;
+  background: #1f8f99;
+}
+
+.pardes-representative-message__lead {
+  max-width: 32rem;
+  margin: 2.5rem 0 0;
+  font-size: 2rem;
+  line-height: 1.55;
+}
+
+.pardes-representative-message__body {
+  max-width: 40rem;
+  margin-top: 2.5rem;
+  color: #394345;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.pardes-representative-message__body p {
+  margin: 0;
+}
+
+.pardes-representative-message__body p + p {
+  margin-top: 1rem;
+}
+
+.pardes-representative-message__signature {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-top: 3.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #c8d2d1;
+}
+
+.pardes-representative-message__role,
+.pardes-representative-message__name {
+  margin: 0;
+}
+
+.pardes-representative-message__role {
+  color: #657174;
+  font-size: 0.8125rem;
+}
+
+.pardes-representative-message__name {
+  font-size: 1.5rem;
+}
+
+.pardes-representative-message__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid #080a0b;
+  color: #080a0b;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.pardes-representative-message__link:hover,
+.pardes-representative-message__link:focus-visible {
+  border-color: #1f8f99;
+  color: #1f8f99;
+}
+
+.pardes-representative-message__visual {
+  position: relative;
+  justify-self: end;
+  width: min(100%, 30rem);
+  background: #08080b;
+}
+
+.pardes-representative-message__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.pardes-representative-message__visual-label {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+[data-pardes-representative-reveal] {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 700ms var(--ease-out-soft), transform 700ms var(--ease-out-soft);
+}
+
+[data-pardes-representative-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pardes-representative-message__visual[data-pardes-representative-reveal] {
+  transition-delay: 100ms;
+}
+
+@media (max-width: 767px) {
+  .pardes-representative-message__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3.5rem;
+    padding: 5.5rem calc(var(--column-unit) * 1) 6rem;
+  }
+
+  .pardes-representative-message__heading {
+    margin-top: 1rem;
+    font-size: 2.75rem;
+  }
+
+  .pardes-representative-message__lead {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+
+  .pardes-representative-message__body {
+    margin-top: 2rem;
+    line-height: 1.9;
+  }
+
+  .pardes-representative-message__signature {
+    margin-top: 2.5rem;
+  }
+
+  .pardes-representative-message__visual {
+    width: 100%;
+    max-width: 30rem;
+    margin-inline: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-pardes-representative-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .pardes-representative-message__link {
+    transition: none;
+  }
+}
+
+/*
+ * font-shippori/font-kozuka/font-en は interior page 群（事業紹介・会社概要・
+ * お知らせ・お問い合わせ等）で使われている書体クラスだが、@theme の --font-*
+ * トークン名（font-serif-jp 等）とは名前が一致しておらず、それ自体では
+ * どのユーティリティにも解決されないため、実際にはbody継承のfont-sansに
+ * フォールバックしていた（見出しが明朝体にならないバグ）。既存クラス名は
+ * そのまま活かし、実際のトークンへのエイリアスとして定義する。
+ */
+.font-shippori {
+  font-family: var(--font-serif-jp);
+}
+.font-kozuka {
+  font-family: var(--font-serif-jp-body);
+}
+.font-en {
+  font-family: var(--font-sans);
+}
+
+/* Interior pages follow the reference site's editorial two-column composition. */
+body:has(.pardes-interior-page) {
+  background: #fff !important;
+  color: #080a0b !important;
+}
+
+body:has(.pardes-interior-page) #site-header-static,
+body:has(.pardes-interior-page) #site-header-dynamic {
+  background: #fff !important;
+  color: #080a0b !important;
+}
+
+body:has(.pardes-interior-page) #site-header-static a,
+body:has(.pardes-interior-page) #site-header-dynamic a {
+  color: #080a0b !important;
+}
+
+body:has(.pardes-interior-page) #site-header-static button,
+body:has(.pardes-interior-page) #site-header-dynamic button {
+  color: var(--color-fg-muted-on-light) !important;
+}
+
+body:has(.pardes-interior-page) #site-header-static button[aria-current="true"],
+body:has(.pardes-interior-page) #site-header-dynamic button[aria-current="true"] {
+  color: var(--color-accent) !important;
+}
+
+body:has(.pardes-interior-page) #site-header-static .text-fg-subtle,
+body:has(.pardes-interior-page) #site-header-dynamic .text-fg-subtle {
+  color: var(--color-border-on-light) !important;
+}
+
+.pardes-interior-page {
+  --column-unit: 2rem;
+  min-height: 100%;
+  background: #fff;
+  color: #080a0b;
+}
+
+.pardes-interior-hero {
+  border-bottom: 1px solid #cfd6d5;
+  padding: 10rem calc(var(--column-unit) * 1) 1.25rem;
+}
+
+.pardes-interior-hero__inner {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.pardes-interior-hero__title {
+  margin: 0;
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.pardes-interior-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-bottom: 0.25rem;
+  color: #080a0b;
+  font-family: var(--font-serif-jp);
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
+
+.pardes-interior-hero__breadcrumb a {
+  color: #7b8586;
+  text-decoration: none;
+}
+
+.pardes-interior-hero__breadcrumb span:last-child {
+  position: relative;
+  padding-bottom: 0.85rem;
+}
+
+.pardes-interior-hero__breadcrumb span:last-child::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: #080a0b;
+  content: "";
+}
+
+.pardes-interior-layout {
+  display: grid;
+  grid-template-columns: minmax(15rem, 31%) minmax(0, 1fr);
+  border-bottom: 1px solid #cfd6d5;
+}
+
+.pardes-interior-index {
+  min-height: 38rem;
+  padding: 1.75rem calc(var(--column-unit) * 1);
+  border-right: 1px solid #cfd6d5;
+}
+
+.pardes-interior-index__label,
+.pardes-interior-kicker {
+  margin: 0;
+  color: #1f8f99;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pardes-interior-index nav {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 2rem;
+  padding-left: 0.9rem;
+  border-left: 1px solid #cfd6d5;
+}
+
+.pardes-interior-index nav a {
+  color: #6b7475;
+  font-family: var(--font-serif-jp);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.pardes-interior-index nav a::before {
+  display: inline-block;
+  width: 0.75rem;
+  margin-right: 0.3rem;
+  color: #1f8f99;
+  content: "↓";
+}
+
+.pardes-interior-index nav a:hover,
+.pardes-interior-index nav a:focus-visible {
+  color: #080a0b;
+}
+
+.pardes-interior-main {
+  min-width: 0;
+  padding: 1.75rem calc(var(--column-unit) * 2) 8rem;
+}
+
+.pardes-interior-section-title {
+  margin: 4.5rem 0 0;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.pardes-contact-intro__body,
+.pardes-contact-form-section__note {
+  max-width: 42rem;
+  margin: 2rem 0 0;
+  color: #455052;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.pardes-contact-form-section {
+  margin-top: 7rem;
+  padding-top: 2rem;
+  border-top: 1px solid #cfd6d5;
+}
+
+.pardes-contact-form-section form {
+  max-width: 58rem;
+  margin-top: 3rem;
+  gap: 1.75rem !important;
+}
+
+.pardes-contact-form-section form > div {
+  min-width: 0;
+}
+
+.pardes-contact-form-section form label {
+  color: #080a0b !important;
+  font-family: var(--font-serif-jp);
+}
+
+.pardes-contact-form-section form input,
+.pardes-contact-form-section form select,
+.pardes-contact-form-section form textarea {
+  border-color: #aeb9b8 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  color: #080a0b !important;
+}
+
+.pardes-contact-form-section form input:focus,
+.pardes-contact-form-section form select:focus,
+.pardes-contact-form-section form textarea:focus {
+  border-color: #1f8f99 !important;
+  box-shadow: none !important;
+}
+
+.pardes-contact-form-section form button {
+  border-radius: 0 !important;
+  background: #080a0b !important;
+  padding: 0.9rem 1.75rem !important;
+  font-family: var(--font-serif-jp);
+}
+
+.pardes-news-main {
+  padding-top: 1.75rem;
+}
+
+.pardes-news-main__list {
+  margin-top: 4rem;
+}
+
+.pardes-news-list__filters {
+  border-left: 1px solid #080a0b;
+  padding-left: 1rem;
+}
+
+.pardes-news-list__filters button {
+  color: #6b7475 !important;
+  font-family: var(--font-serif-jp);
+  font-size: 1rem;
+}
+
+.pardes-news-list__filters button[aria-selected="true"] {
+  color: #080a0b !important;
+}
+
+.pardes-news-list__grid {
+  column-gap: 1.75rem !important;
+  row-gap: 3.5rem !important;
+}
+
+.pardes-news-list__image {
+  border-radius: 4px !important;
+  background: #aab4ba !important;
+}
+
+.pardes-news-list__card a > p {
+  color: #080a0b !important;
+  font-family: var(--font-serif-jp);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.pardes-news-list__card a > div:last-child {
+  color: #6b7475 !important;
+}
+
+.pardes-news-detail__date {
+  margin: 1rem 0 0;
+  color: #6b7475;
+  font-size: 0.875rem;
+}
+
+.pardes-news-detail__content {
+  max-width: 52rem;
+  margin-top: 4rem;
+  color: #455052;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.pardes-news-detail__content :where(h2, h3) {
+  margin-top: 3rem;
+  color: #080a0b;
+  font-family: var(--font-serif-jp);
+  font-weight: 400;
+}
+
+.pardes-news-detail__content :where(p, ul, ol) {
+  margin-top: 1.25rem;
+}
+
+.pardes-news-detail__content a {
+  color: #1f8f99;
+}
+
+/* 製品説明・採用情報など、interior page内の縦積み番号リスト（カードグリッドの代替）。 */
+.pardes-numbered-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+
+.pardes-numbered-list__item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid #cfd6d5;
+}
+
+.pardes-numbered-list__item:last-child {
+  border-bottom: 1px solid #cfd6d5;
+}
+
+.pardes-numbered-list__index {
+  flex-shrink: 0;
+  width: 3rem;
+  color: #1f8f99;
+  font-size: 1.25rem;
+}
+
+.pardes-numbered-list__title {
+  margin: 0;
+  color: #080a0b;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.pardes-numbered-list__body {
+  max-width: 40rem;
+  margin: 0.75rem 0 0;
+  color: #455052;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* BILラインナップ・募集職種など、独立したブロックとして深掘りする構成。 */
+.pardes-deep-dive {
+  padding: 3rem 0;
+  border-top: 1px solid #cfd6d5;
+}
+
+.pardes-deep-dive:last-of-type {
+  border-bottom: 1px solid #cfd6d5;
+}
+
+.pardes-deep-dive__label {
+  margin: 0;
+  color: #1f8f99;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pardes-deep-dive__title {
+  margin: 0.75rem 0 0;
+  color: #080a0b;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.pardes-deep-dive__meta {
+  margin: 0.5rem 0 0;
+  color: #6b7475;
+  font-size: 0.875rem;
+}
+
+.pardes-deep-dive__body {
+  max-width: 40rem;
+  margin: 1rem 0 0;
+  color: #455052;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.pardes-deep-dive__cta {
+  display: inline-flex;
+  margin-top: 1.5rem;
+  color: #080a0b;
+}
+
+/* 従来AIとの比較表。ダークテーマのCompareTableとは別に、interior page用の見た目に上書きする。 */
+.pardes-compare-table {
+  overflow-x: auto;
+  margin-top: 2.5rem;
+  border: 1px solid #cfd6d5;
+  border-radius: 0;
+}
+
+.pardes-compare-table table {
+  width: 100%;
+  min-width: 40rem;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.pardes-compare-table thead tr {
+  background: #f3f5f5;
+}
+
+.pardes-compare-table th {
+  padding: 1rem 1.25rem;
+  color: #080a0b;
+  font-family: var(--font-serif-jp);
+  font-weight: 400;
+  text-align: left;
+}
+
+.pardes-compare-table th:last-child {
+  color: #1f8f99;
+}
+
+.pardes-compare-table td {
+  padding: 1rem 1.25rem;
+  vertical-align: top;
+  color: #455052;
+}
+
+.pardes-compare-table tr {
+  border-top: 1px solid #cfd6d5;
+}
+
+.pardes-compare-table td:last-child {
+  color: #080a0b;
+}
+
+.pardes-product-lead {
+  max-width: 42rem;
+  margin: 2rem 0 0;
+  color: #080a0b;
+  font-size: 1.125rem;
+  line-height: 1.9;
+}
+
+.pardes-product-price-note,
+.pardes-recruit-price-note {
+  margin-top: 1.5rem;
+  color: #6b7475;
+  font-size: 0.875rem;
+}
+
+.pardes-interior-section {
+  margin-top: 5rem;
+}
+
+.pardes-interior-cta {
+  margin-top: 5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #cfd6d5;
+}
+
+.pardes-recruit-message {
+  max-width: 42rem;
+  margin-top: 2.5rem;
+  color: #080a0b;
+  font-size: 1.1875rem;
+  line-height: 2.1;
+}
+
+.pardes-recruit-message p + p {
+  margin-top: 1.5rem;
+}
+
+.pardes-recruit-skills {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.pardes-recruit-skills__list {
+  margin-top: 1rem;
+  color: #455052;
+  font-size: 1rem;
+  line-height: 1.9;
+  list-style: disc;
+  list-style-position: inside;
+}
+
+@media (min-width: 768px) {
+  .pardes-recruit-skills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .pardes-contact-form-section form {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pardes-contact-form-section form > div:has(textarea),
+  .pardes-contact-form-section form > p,
+  .pardes-contact-form-section form > button {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .pardes-interior-page {
+    --column-unit: 1rem;
+  }
+
+  .pardes-interior-hero {
+    padding: 7.5rem calc(var(--column-unit) * 1) 1rem;
+  }
+
+  .pardes-interior-hero__inner {
+    display: block;
+  }
+
+  .pardes-interior-hero__title {
+    font-size: 3.25rem;
+  }
+
+  .pardes-interior-hero__breadcrumb {
+    justify-content: flex-end;
+    margin-top: 1.75rem;
+  }
+
+  .pardes-interior-layout {
+    display: block;
+  }
+
+  .pardes-interior-index {
+    min-height: 0;
+    padding: 1.5rem calc(var(--column-unit) * 1);
+    border-right: 0;
+    border-bottom: 1px solid #cfd6d5;
+  }
+
+  .pardes-interior-index nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin-top: 1rem;
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .pardes-interior-main {
+    padding: 1.5rem calc(var(--column-unit) * 1) 5rem;
+  }
+
+  .pardes-interior-section-title {
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+
+  .pardes-contact-form-section {
+    margin-top: 4.5rem;
+  }
+
+  .pardes-news-main__list {
+    margin-top: 3rem;
+  }
+
+  .pardes-news-detail__content {
+    margin-top: 2.5rem;
+  }
+
+  .pardes-news-list__grid {
+    margin-top: 2.5rem !important;
+  }
+
+  .pardes-interior-section,
+  .pardes-interior-cta {
+    margin-top: 3rem;
+  }
+
+  .pardes-deep-dive__title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "meta": {
+    "titleSuffix": "Pardes Inc.",
+    "defaultTitle": "Pardes Inc. | Toward AGI with Free Will",
+    "defaultDescription": "Pardes Inc. is an AI startup developing BiNet, a biologically-plausible neural network that does not rely on backpropagation."
+  },
+  "nav": {
+    "home": "HOME",
+    "business": "Business",
+    "company": "Company",
+    "product": "Product",
+    "recruit": "Careers",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "footer": {
+    "tagline": "An AI startup pursuing artificial general intelligence (AGI) with free will.",
+    "sitemap": "Sitemap",
+    "privacy": "Privacy Policy",
+    "copyright": "© {year} Pardes Inc. All rights reserved."
+  },
+  "home": {
+    "meta": {
+      "title": "HOME",
+      "description": "Learn about Pardes Inc.'s vision and BiNet technology, in pursuit of artificial general intelligence with free will."
+    },
+    "hero": {
+      "eyebrow": "AGI Startup",
+      "heading": "Toward artificial general\nintelligence with free will.",
+      "body": "Pardes is developing BiNet, a biologically-plausible neural network that does not depend on backpropagation. By giving any moving body a “brain,” we aim to expand what AI can do in the physical world.",
+      "ctaPrimary": "View Product",
+      "ctaSecondary": "Contact Us",
+      "scrollCue": "Scroll down",
+      "recentUpdateLabel": "Recent update",
+      "narrative": [
+        "A probabilistic learning process that does not rely on gradient computation, aiming for intelligence that does not require massive training data or GPU clusters.",
+        "Designed so that new experiences are less likely to overwrite existing knowledge, enabling intelligence that keeps learning in the field.",
+        "Aiming for real-time learning and adaptation with the limited compute available on the robot itself, without assuming a constant cloud connection."
+      ]
+    },
+    "about": {
+      "heading": "About Pardes",
+      "body": "Explore our vision, BiNet's technology, and how we're organized.",
+      "items": [
+        { "label": "Business", "href": "/business", "visual": "about-business" },
+        { "label": "Company", "href": "/company", "visual": "about-company" },
+        { "label": "Product", "href": "/product", "visual": "about-product" }
+      ]
+    },
+    "showcase": {
+      "eyebrow": "BIL Lineup",
+      "heading": "Intelligence, Licensed.",
+      "pickUpLabel": "Pick up",
+      "viewLabel": "Learn more",
+      "items": [
+        {
+          "href": "/product",
+          "name": "BiNet SDK",
+          "description": "A developer kit for robotics ventures and research institutions."
+        },
+        {
+          "href": "/product",
+          "name": "BiNet Binary Module",
+          "description": "A platform-locked inference engine for companies in mass production and operation."
+        },
+        {
+          "href": "/product",
+          "name": "Custom Integration",
+          "description": "Tailored co-development for specific industries."
+        }
+      ]
+    },
+    "newsPreview": {
+      "heading": "News",
+      "viewAllLabel": "View all news"
+    },
+    "recruit": {
+      "eyebrow": "Recruit",
+      "heading": "Work With Us",
+      "messageLabel": "Message",
+      "body": "We're a small, focused team tackling a challenge with few parallels worldwide: realizing artificial general intelligence with free will.",
+      "ctaLabel": "View Careers"
+    },
+    "contact": {
+      "heading": "Contact",
+      "body": "Reach out about a PoC, a career application, or media inquiries — we'd love to hear from you.",
+      "purposes": [
+        { "tag": "", "label": "PoC Inquiries", "description": "Questions about piloting or adopting BiNet." },
+        { "tag": "", "label": "Career Applications", "description": "Open roles and how to apply." },
+        { "tag": "", "label": "Media Inquiries", "description": "Press and media-related questions." }
+      ],
+      "ctaLabel": "Go to Contact Form"
+    }
+  },
+  "business": {
+    "meta": {
+      "title": "Business",
+      "description": "The problems Pardes aims to solve, our BIL licensing model, and our development roadmap."
+    },
+    "hero": {
+      "heading": "Tackling the 3 walls blocking\nrobotics and AI adoption",
+      "body": "Pardes is addressing structural challenges in conventional deep learning through a biologically-plausible learning principle."
+    },
+    "challenges": {
+      "heading": "The 3 Walls",
+      "items": [
+        {
+          "title": "The wall of learning cost",
+          "body": "Conventional deep learning requires large amounts of training data and compute, making adoption too costly for many use cases."
+        },
+        {
+          "title": "The wall of hardware",
+          "body": "Dependence on GPUs leads to high power consumption and cost, making it difficult to deploy on edge devices and mobile robots."
+        },
+        {
+          "title": "Rigidity of intelligence",
+          "body": "Once trained, models struggle to adapt in real time to changes in their environment, often requiring retraining or redesign for each new site."
+        }
+      ]
+    },
+    "coreTech": {
+      "heading": "What is BiNet?",
+      "body": "BiNet is a biologically-plausible neural network technology that does not use backpropagation (BP). By combining a learning mechanism modeled on neurotransmitter activity with temporal accumulation/smoothing of information and learning via probabilistic convergence, it realizes a learning principle different from conventional AI.",
+      "comparisonTitle": "Conventional AI (Backpropagation) vs. BiNet",
+      "comparisonNote": "This table shows directional tendencies of each approach; specific figures and implementation details are not disclosed.",
+      "table": {
+        "headers": ["Aspect", "Conventional AI (Backpropagation)", "BiNet"],
+        "rows": [
+          ["Vanishing gradients", "More likely as networks get deeper", "Does not occur in principle, as it does not rely on gradient computation"],
+          ["Overfitting", "Prone to overfitting on training data", "Tends to suppress overfitting due to the nature of probabilistic convergence"],
+          ["Catastrophic forgetting", "New learning tends to erase existing knowledge", "Designed to retain existing knowledge while learning new information"],
+          ["Real-time learning", "Additional learning often requires retraining/redeployment", "Designed for continuous adaptation while operating"],
+          ["Biological plausibility", "Neuroscientific plausibility is not a design consideration", "Adopts mechanisms modeled on neurotransmitter activity"]
+        ]
+      }
+    },
+    "lineup": {
+      "heading": "Business Model: BIL (BiNet Intelligence Licensing)",
+      "body": "BIL is our business model for licensing BiNet as an intelligence module that runs on platforms such as NPUs. We offer three tiers depending on the mode of delivery.",
+      "items": [
+        {
+          "title": "BiNet SDK",
+          "target": "For robotics ventures & research institutions",
+          "body": "A developer kit for integrating BiNet into existing platforms and research environments."
+        },
+        {
+          "title": "BiNet Binary Module",
+          "target": "For companies in mass production / operational phases",
+          "body": "Delivered as an inference engine locked to a specific platform."
+        },
+        {
+          "title": "Custom Integration",
+          "target": "For specific industries",
+          "body": "Co-development tailored to the requirements of a specific industry."
+        }
+      ],
+      "priceNote": "Pricing is provided based on individual consultations. Please contact us to learn more."
+    },
+    "market": {
+      "heading": "Market Environment",
+      "body": "The industrial robotics market is expected to expand globally, with similar growth projected in Japan.",
+      "source": "Source: Grand View Research (grandviewresearch.com)",
+      "referenceDate": "As of: July 2026"
+    },
+    "roadmap": {
+      "heading": "Development Roadmap",
+      "body": "Excluding investor-facing details such as funding plans and expenditure breakdowns, here are our key milestones by phase.",
+      "phases": [
+        {
+          "title": "Phase 1",
+          "body": "Refine the core BiNet technology and prepare an alpha version of the developer SDK."
+        },
+        {
+          "title": "Phase 2",
+          "body": "Release a beta version of BiNet SDK and advance proof-of-concept work with robotics ventures and research institutions."
+        },
+        {
+          "title": "Phase 3",
+          "body": "Launch BiNet Binary Module and expand collaboration with companies in mass production and operational phases."
+        },
+        {
+          "title": "Phase 4 and beyond",
+          "body": "Expand into new business areas including Custom Integration, and strengthen our organization for the next phase of growth."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Interested in a PoC or partnership?",
+      "body": "Feel free to reach out to discuss how BiNet could fit your use case.",
+      "links": {
+        "product": "View Product",
+        "contact": "Discuss a PoC"
+      }
+    }
+  },
+  "company": {
+    "meta": {
+      "title": "Company",
+      "description": "An overview of Pardes Inc., our vision, and our mission."
+    },
+    "hero": {
+      "heading": "Company"
+    },
+    "basicInfo": {
+      "heading": "Company Information",
+      "companyName": "Company Name",
+      "companyNameValue": "Pardes Inc.",
+      "companyType": "Entity Type",
+      "companyTypeValue": "Kabushiki Kaisha (Corporation)",
+      "businessContent": "Business",
+      "businessContentValue": "Research & development of BiNet and artificial general intelligence (AGI)",
+      "representative": "Representative",
+      "representativeValue": "Yuto Koizumi",
+      "address": "Address",
+      "founded": "Founded",
+      "capital": "Capital",
+      "pending": "To be announced"
+    },
+    "vision": {
+      "heading": "Vision",
+      "body": "The realization of artificial general intelligence (AGI) with free will."
+    },
+    "mission": {
+      "heading": "Mission",
+      "body": "Through focused research and development, we license BiNet as the “brain” for any moving body, expanding what AI can achieve in the physical world."
+    },
+    "cta": {
+      "heading": "Work with Pardes, or partner with Pardes",
+      "links": {
+        "recruit": "View Careers",
+        "contact": "Contact Us"
+      }
+    }
+  },
+  "product": {
+    "meta": {
+      "title": "Product",
+      "description": "The technical characteristics of BiNet, our biologically-plausible neural network, and our BIL licensing model."
+    },
+    "hero": {
+      "heading": "BiNet",
+      "body": "A biologically-plausible neural network technology that does not use backpropagation."
+    },
+    "definition": {
+      "heading": "What is BiNet?",
+      "body": "BiNet is a biologically-plausible neural network technology developed by Pardes Inc. that does not use backpropagation. Through a learning mechanism modeled on neurotransmitter activity, it implements intelligence on principles different from conventional deep learning."
+    },
+    "features": {
+      "heading": "Three Key Features of BiNet",
+      "items": [
+        {
+          "title": "Temporal accumulation & smoothing",
+          "body": "Accumulates and smooths incoming information over time, resulting in learning that is less affected by momentary noise."
+        },
+        {
+          "title": "Modeling neurotransmitter activity",
+          "body": "A mechanism modeled on the activity of neurotransmitters in living organisms, achieving biologically-plausible information processing."
+        },
+        {
+          "title": "Learning via probabilistic convergence",
+          "body": "Learning proceeds through a probabilistic convergence process, rather than gradient-based backpropagation."
+        }
+      ]
+    },
+    "comparison": {
+      "heading": "Comparison with Conventional AI",
+      "table": {
+        "headers": ["Aspect", "Conventional AI (Backpropagation)", "BiNet"],
+        "rows": [
+          ["Vanishing gradients", "More likely as networks get deeper", "Does not occur in principle, as it does not rely on gradient computation"],
+          ["Overfitting", "Prone to overfitting on training data", "Tends to suppress overfitting due to the nature of probabilistic convergence"],
+          ["Catastrophic forgetting", "New learning tends to erase existing knowledge", "Designed to retain existing knowledge while learning new information"],
+          ["Real-time learning", "Additional learning often requires retraining/redeployment", "Designed for continuous adaptation while operating"],
+          ["Biological plausibility", "Neuroscientific plausibility is not a design consideration", "Adopts mechanisms modeled on neurotransmitter activity"]
+        ]
+      }
+    },
+    "lineup": {
+      "heading": "BIL Lineup",
+      "items": [
+        {
+          "title": "BiNet SDK",
+          "target": "For: robotics ventures & research institutions",
+          "format": "Format: developer kit",
+          "body": "Integrate BiNet into your existing platform or research environment and validate real-time learning capabilities."
+        },
+        {
+          "title": "BiNet Binary Module",
+          "target": "For: companies in mass production / operational phases",
+          "format": "Format: inference engine locked to a specific platform",
+          "body": "Provided as an execution-only module built for stable operation in production environments."
+        },
+        {
+          "title": "Custom Integration",
+          "target": "For: companies and institutions in specific industries",
+          "format": "Format: co-development",
+          "body": "We design and develop BiNet applications together with you, tailored to your industry's requirements."
+        }
+      ],
+      "priceNote": "Please contact us for pricing and contract terms."
+    },
+    "cta": {
+      "heading": "Interested in a PoC or adoption?",
+      "links": {
+        "contact": "Discuss a PoC"
+      }
+    }
+  },
+  "recruit": {
+    "meta": {
+      "title": "Careers",
+      "description": "Open roles at Pardes Inc., along with required and preferred skills."
+    },
+    "hero": {
+      "heading": "Careers",
+      "body": "Join us in the ambitious challenge of realizing artificial general intelligence with free will."
+    },
+    "intro": {
+      "heading": "Working at Pardes",
+      "body": "You'll take part, as one of our earliest members, in R&D with few parallels worldwide: implementing a new principle of intelligence that does not depend on backpropagation. Two BiNet engineers have already joined us — it's a small team where you'll have real ownership."
+    },
+    "positions": {
+      "heading": "Open Roles",
+      "items": [
+        {
+          "title": "BiNet Implementation Engineer",
+          "body": "Work on core BiNet implementation and R&D of our proprietary OS, using CUDA C++, Rust, and related technologies."
+        },
+        {
+          "title": "Cloud & Application Engineer",
+          "body": "Develop cloud and application-layer components such as the BiNet SDK and management platform."
+        },
+        {
+          "title": "Robotics Hardware Engineer (future hiring)",
+          "body": "A future role for our upcoming robot hardware development phase."
+        }
+      ]
+    },
+    "skills": {
+      "requiredHeading": "Required Skills & Environment",
+      "required": [
+        "Basic knowledge of C++/Python",
+        "A development environment with an RTX 40-series GPU"
+      ],
+      "preferredHeading": "Preferred Skills",
+      "preferred": [
+        "Development experience on Linux",
+        "Team development experience using Git",
+        "A strong interest in mathematics and physics"
+      ]
+    },
+    "cta": {
+      "heading": "Apply or request a casual interview",
+      "links": {
+        "contact": "Contact Us About Careers"
+      }
+    }
+  },
+  "news": {
+    "meta": {
+      "title": "News",
+      "description": "Latest news and updates from Pardes Inc."
+    },
+    "hero": {
+      "heading": "News"
+    },
+    "categories": {
+      "all": "All",
+      "milestone": "Milestone",
+      "recruit": "Careers",
+      "poc": "PoC",
+      "media": "Media"
+    },
+    "list": {
+      "empty": "No news at this time.",
+      "publishedOn": "Published: {date}",
+      "updatedOn": "Updated: {date}",
+      "readMore": "Read more"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Get in touch about PoC partnerships, career applications, or media inquiries."
+    },
+    "hero": {
+      "heading": "Contact Us",
+      "body": "Please select the purpose of your inquiry — PoC partnership, career application, media inquiry, or other — and fill out the form below."
+    },
+    "form": {
+      "name": "Name",
+      "company": "Company / Affiliation",
+      "email": "Email Address",
+      "purpose": "Purpose of Inquiry",
+      "purposeOptions": {
+        "poc": "PoC Partnership",
+        "recruit": "Career Application",
+        "media": "Media Inquiry",
+        "other": "Other"
+      },
+      "message": "Message",
+      "consent": "The personal information you provide will be used solely to respond to your inquiry, and will be retained for up to one year, including after your inquiry is resolved, before being deleted. Please see our",
+      "consentLink": "Privacy Policy",
+      "consentSuffix": "for details.",
+      "submit": "Submit",
+      "submitting": "Submitting...",
+      "success": "Your inquiry has been received. We'll get back to you soon.",
+      "error": "Something went wrong while submitting. Please try again later.",
+      "errors": {
+        "required": "This field is required.",
+        "email": "Please enter a valid email address."
+      }
+    }
+  },
+  "legal": {
+    "privacy": {
+      "meta": {
+        "title": "Privacy Policy",
+        "description": "The privacy policy of Pardes Inc."
+      },
+      "heading": "Privacy Policy",
+      "intro": "Pardes Inc. (“we,” “our,” or “the Company”) handles personal information collected through our contact form in accordance with the following policy.",
+      "sections": [
+        {
+          "title": "Information We Collect",
+          "body": "We collect the name, company/affiliation, email address, purpose of inquiry, and message you provide through our contact form."
+        },
+        {
+          "title": "Purpose of Use",
+          "body": "The information we collect is used solely to respond to your inquiry and to communicate with you regarding PoC partnerships or career applications, and is not used for any other purpose."
+        },
+        {
+          "title": "Retention Period",
+          "body": "We retain personal information for up to one year for the purpose of responding to inquiries, after which it is promptly deleted."
+        },
+        {
+          "title": "Third-Party Disclosure & Processors",
+          "body": "We use an email delivery service (Resend) to respond to inquiries, and Cloudflare Turnstile for spam protection. As part of using these services, necessary information may be transmitted to these service providers."
+        },
+        {
+          "title": "Analytics",
+          "body": "We use Google Analytics 4 to analyze site usage for the purpose of improving our services."
+        },
+        {
+          "title": "Requests for Disclosure or Deletion",
+          "body": "If you wish to request disclosure, correction, or deletion of your personal information, please contact us via our contact form."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "meta": {
+    "titleSuffix": "Pardes Inc.（パルデス）",
+    "defaultTitle": "Pardes Inc.（パルデス）| 自由意志を持つAGIの実現へ",
+    "defaultDescription": "Pardes Inc.は、誤差逆伝播法を使わない生物学的妥当性の高いニューラルネットワーク「BiNet」を開発するAIスタートアップです。"
+  },
+  "nav": {
+    "home": "HOME",
+    "business": "事業紹介",
+    "company": "会社概要",
+    "product": "製品説明",
+    "recruit": "採用情報",
+    "news": "お知らせ",
+    "contact": "お問い合わせ"
+  },
+  "footer": {
+    "tagline": "自由意志を持つ汎用人工知能（AGI）の実現を目指すAIスタートアップ。",
+    "sitemap": "サイトマップ",
+    "privacy": "プライバシーポリシー",
+    "copyright": "© {year} Pardes Inc. All rights reserved."
+  },
+  "home": {
+    "meta": {
+      "title": "HOME",
+      "description": "自由意志を持つ汎用人工知能（AGI）の実現を目指すPardes Inc.のビジョンとBiNet技術を紹介します。"
+    },
+    "hero": {
+      "eyebrow": "AGI Startup",
+      "heading": "自由意志を持つ\n汎用人工知能（AGI）の実現へ。",
+      "body": "Pardesは、誤差逆伝播法（バックプロパゲーション）に依存しない、生物学的妥当性の高いニューラルネットワーク「BiNet」を開発しています。あらゆる動体に「脳」を宿すことで、物理世界におけるAIの可能性を拡張します。",
+      "ctaPrimary": "製品を見る",
+      "ctaSecondary": "お問い合わせ",
+      "scrollCue": "Scroll down",
+      "recentUpdateLabel": "Recent update",
+      "narrative": [
+        "勾配計算に依存しない確率的な学習プロセスにより、大規模な学習データやGPUクラスタを前提としない知能実装を目指します。",
+        "新しい経験を学習しても、既存の知識を上書きしにくい設計原理を採用し、現場で学び続けられる知能を目指します。",
+        "クラウドへの常時接続を前提とせず、ロボット本体上の限られた計算資源でリアルタイムに学習・適応することを目指します。"
+      ]
+    },
+    "about": {
+      "heading": "About Pardes",
+      "body": "ビジョン、BiNetの技術、組織のあり方。Pardesの取り組みについてご紹介します。",
+      "items": [
+        { "label": "事業紹介", "href": "/business", "visual": "about-business" },
+        { "label": "会社概要", "href": "/company", "visual": "about-company" },
+        { "label": "製品説明", "href": "/product", "visual": "about-product" }
+      ]
+    },
+    "showcase": {
+      "eyebrow": "BIL Lineup",
+      "heading": "Intelligence, Licensed.",
+      "pickUpLabel": "Pick up",
+      "viewLabel": "詳しく見る",
+      "items": [
+        {
+          "href": "/product",
+          "name": "BiNet SDK",
+          "description": "ロボティクス系ベンチャー・研究機関向けの開発者キット。"
+        },
+        {
+          "href": "/product",
+          "name": "BiNet Binary Module",
+          "description": "量産・運用フェーズの企業向け、特定プラットフォーム専用の推論エンジン。"
+        },
+        {
+          "href": "/product",
+          "name": "Custom Integration",
+          "description": "特定業界の要件に合わせた共同開発。"
+        }
+      ]
+    },
+    "newsPreview": {
+      "heading": "News",
+      "viewAllLabel": "お知らせ一覧を見る"
+    },
+    "recruit": {
+      "eyebrow": "Recruit",
+      "heading": "Work With Us",
+      "messageLabel": "Message",
+      "body": "自由意志を持つ汎用人工知能の実現という、世界的にも類を見ない挑戦に、少数精鋭のチームで取り組んでいます。",
+      "ctaLabel": "採用情報を見る"
+    },
+    "contact": {
+      "heading": "Contact",
+      "body": "PoCのご相談、採用へのご応募、取材のお問い合わせなど、お気軽にご連絡ください。",
+      "purposes": [
+        { "tag": "PoC inquiries", "label": "PoCのご相談", "description": "BiNetの導入・実証実験についてのご相談はこちら。" },
+        { "tag": "Career applications", "label": "採用のご応募", "description": "募集職種・応募方法についてはこちら。" },
+        { "tag": "Media inquiries", "label": "取材のお問い合わせ", "description": "メディア・取材に関するお問い合わせはこちら。" }
+      ],
+      "ctaLabel": "お問い合わせフォームへ"
+    }
+  },
+  "business": {
+    "meta": {
+      "title": "事業紹介",
+      "description": "Pardesが解決を目指す課題と、BiNetのライセンス事業モデル「BIL」、開発ロードマップを紹介します。"
+    },
+    "hero": {
+      "heading": "ロボティクス・AI導入を阻む\n3つの壁に挑む",
+      "body": "Pardesは、既存の深層学習が抱える構造的な課題を、生物学的妥当性の高い学習原理によって解決しようとしています。"
+    },
+    "challenges": {
+      "heading": "3つの壁",
+      "items": [
+        {
+          "title": "学習コストの壁",
+          "body": "大量の学習データと計算資源を必要とする従来型の深層学習は、多くの現場にとって導入コストが高すぎます。"
+        },
+        {
+          "title": "ハードウェアの壁",
+          "body": "GPUへの依存は高い消費電力とコストを招き、エッジデバイスやモバイルロボットへの搭載を難しくしています。"
+        },
+        {
+          "title": "知能の硬直化",
+          "body": "一度学習したモデルはその場の環境変化にリアルタイムで適応しにくく、現場ごとの再学習・再設計が必要になりがちです。"
+        }
+      ]
+    },
+    "coreTech": {
+      "heading": "BiNetとは",
+      "body": "BiNetは、誤差逆伝播法（BP）を使用しない、生物学的妥当性の高いニューラルネットワーク技術です。神経伝達物質の働きを模した学習メカニズムと、時間的な情報の蓄積・平滑化、確率的な収束による学習を組み合わせることで、従来のAIとは異なる学習原理を実現します。",
+      "comparisonTitle": "従来AI（誤差逆伝播法）とBiNetの比較",
+      "comparisonNote": "本表は方式上の傾向を示すものであり、具体的な数値・実装詳細は非公開としています。",
+      "table": {
+        "headers": ["観点", "従来AI（誤差逆伝播法）", "BiNet"],
+        "rows": [
+          ["勾配消失", "層が深くなるほど発生しやすい", "勾配計算に依存しないため原理的に生じない"],
+          ["過学習", "学習データへの過適合が生じやすい", "確率的収束の性質上、過適合を抑制しやすい"],
+          ["破滅的忘却", "新しい学習で既存知識が失われやすい", "既存知識を保持しながら追加学習しやすい"],
+          ["リアルタイム学習", "追加学習に再学習・再デプロイが必要になりやすい", "動作しながらの継続的な適応を志向する設計"],
+          ["生物学的妥当性", "神経科学的な妥当性は考慮されない", "神経伝達物質の働きを模したメカニズムを採用"]
+        ]
+      }
+    },
+    "lineup": {
+      "heading": "事業モデル：BIL（BiNet Intelligence Licensing）",
+      "body": "BiNetを、NPU等の基盤上で動作する知能モジュールとしてライセンス提供する事業モデルです。提供形態に応じて3つのラインナップを用意しています。",
+      "items": [
+        {
+          "title": "BiNet SDK",
+          "target": "ロボットベンチャー・研究機関向け",
+          "body": "既存の機体・研究環境にBiNetを組み込むための開発者向けキットです。"
+        },
+        {
+          "title": "BiNet Binary Module",
+          "target": "量産・実運用フェーズの企業向け",
+          "body": "特定基盤にロックされた推論実行エンジンとして提供する形態です。"
+        },
+        {
+          "title": "Custom Integration",
+          "target": "特定業界向け",
+          "body": "個別の業界要件に合わせた共同開発形式でのご提供です。"
+        }
+      ],
+      "priceNote": "料金体系は個別のご相談内容に応じてご案内しております。まずはお問い合わせください。"
+    },
+    "market": {
+      "heading": "市場環境",
+      "body": "産業用ロボット市場は世界的に拡大が見込まれており、日本国内においても同様の成長が予測されています。",
+      "source": "出典：Grand View Research（grandviewresearch.com）",
+      "referenceDate": "参照日：2026年7月"
+    },
+    "roadmap": {
+      "heading": "開発ロードマップ",
+      "body": "資金計画や支出内訳など投資家向けの詳細情報を除き、主要なマイルストーンをフェーズ単位でご紹介します。",
+      "phases": [
+        {
+          "title": "フェーズ1",
+          "body": "BiNetのコア技術の完成度を高め、開発者向けSDKのアルファ版を準備します。"
+        },
+        {
+          "title": "フェーズ2",
+          "body": "BiNet SDKのベータ版を提供し、ロボットベンチャー・研究機関との実証を進めます。"
+        },
+        {
+          "title": "フェーズ3",
+          "body": "BiNet Binary Moduleを提供開始し、量産・実運用フェーズの企業との協業を拡大します。"
+        },
+        {
+          "title": "フェーズ4以降",
+          "body": "Custom Integrationを含む事業領域の拡大と、次の成長投資に向けた体制強化を進めます。"
+        }
+      ]
+    },
+    "cta": {
+      "heading": "PoC・協業のご相談",
+      "body": "BiNetの導入可能性について、まずはお気軽にお問い合わせください。",
+      "links": {
+        "product": "製品説明を見る",
+        "contact": "PoCの相談をする"
+      }
+    }
+  },
+  "company": {
+    "meta": {
+      "title": "会社概要",
+      "description": "Pardes Inc.の会社概要、ビジョン、ミッションをご紹介します。"
+    },
+    "hero": {
+      "heading": "会社概要"
+    },
+    "basicInfo": {
+      "heading": "基本情報",
+      "companyName": "会社名",
+      "companyNameValue": "Pardes Inc.（パルデス）",
+      "companyType": "設立形態",
+      "companyTypeValue": "株式会社",
+      "businessContent": "事業内容",
+      "businessContentValue": "BiNetの研究開発、汎用人工知能（AGI）の研究開発",
+      "representative": "代表者",
+      "representativeValue": "小泉 優斗",
+      "address": "所在地",
+      "founded": "設立日",
+      "capital": "資本金",
+      "pending": "準備中／確定次第公開"
+    },
+    "vision": {
+      "heading": "ビジョン",
+      "body": "自由意志を持つ汎用人工知能（AGI）の実現。"
+    },
+    "mission": {
+      "heading": "ミッション",
+      "body": "集中的な研究開発により、あらゆる動体の「脳」としてBiNetをライセンス展開し、物理世界におけるAIの可能性を切り拓きます。"
+    },
+    "cta": {
+      "heading": "Pardesで働く・Pardesと協業する",
+      "links": {
+        "recruit": "採用情報を見る",
+        "contact": "お問い合わせ"
+      }
+    }
+  },
+  "product": {
+    "meta": {
+      "title": "製品説明",
+      "description": "生物学的妥当性の高いニューラルネットワーク「BiNet」の技術的特徴と、ライセンス事業モデル「BIL」を紹介します。"
+    },
+    "hero": {
+      "heading": "BiNet",
+      "body": "誤差逆伝播法（バックプロパゲーション）を使用しない、生物学的妥当性の高いニューラルネットワーク技術です。"
+    },
+    "definition": {
+      "heading": "BiNetとは",
+      "body": "BiNet（バイネット）は、Pardes Inc.が開発する、誤差逆伝播法を使用しない生物学的妥当性の高いニューラルネットワーク技術です。神経伝達物質の働きを模した学習メカニズムにより、従来の深層学習とは異なる原理で知能を実装します。"
+    },
+    "features": {
+      "heading": "BiNetの3大特徴",
+      "items": [
+        {
+          "title": "時間的累積・時間的平滑化",
+          "body": "入力される情報を時間軸上で蓄積・平滑化し、瞬間的なノイズに影響されにくい学習を行います。"
+        },
+        {
+          "title": "神経伝達物質の模倣",
+          "body": "生体内の神経伝達物質の働きを模したメカニズムにより、生物学的妥当性の高い情報処理を実現します。"
+        },
+        {
+          "title": "確率的収束による学習",
+          "body": "勾配計算に基づく誤差逆伝播法ではなく、確率的な収束過程によって学習を行います。"
+        }
+      ]
+    },
+    "comparison": {
+      "heading": "従来AIとの比較",
+      "table": {
+        "headers": ["観点", "従来AI（誤差逆伝播法）", "BiNet"],
+        "rows": [
+          ["勾配消失", "層が深くなるほど発生しやすい", "勾配計算に依存しないため原理的に生じない"],
+          ["過学習", "学習データへの過適合が生じやすい", "確率的収束の性質上、過適合を抑制しやすい"],
+          ["破滅的忘却", "新しい学習で既存知識が失われやすい", "既存知識を保持しながら追加学習しやすい"],
+          ["リアルタイム学習", "追加学習に再学習・再デプロイが必要になりやすい", "動作しながらの継続的な適応を志向する設計"],
+          ["生物学的妥当性", "神経科学的な妥当性は考慮されない", "神経伝達物質の働きを模したメカニズムを採用"]
+        ]
+      }
+    },
+    "lineup": {
+      "heading": "BILラインナップ",
+      "items": [
+        {
+          "title": "BiNet SDK",
+          "target": "対象：ロボットベンチャー・研究機関",
+          "format": "提供形態：開発者向けキット",
+          "body": "既存の機体・研究環境にBiNetを組み込み、即時学習機能を検証できます。"
+        },
+        {
+          "title": "BiNet Binary Module",
+          "target": "対象：量産・実運用フェーズの企業",
+          "format": "提供形態：特定基盤にロックされた推論実行エンジン",
+          "body": "本番環境での安定運用を前提とした、実行専用モジュールとして提供します。"
+        },
+        {
+          "title": "Custom Integration",
+          "target": "対象：特定業界の企業・研究機関",
+          "format": "提供形態：共同開発",
+          "body": "個別業界の要件に合わせ、Pardesと共同でBiNetの適用を設計・開発します。"
+        }
+      ],
+      "priceNote": "料金・契約条件はお問い合わせください。"
+    },
+    "cta": {
+      "heading": "PoC・導入のご相談",
+      "links": {
+        "contact": "PoCの相談をする"
+      }
+    }
+  },
+  "recruit": {
+    "meta": {
+      "title": "採用情報",
+      "description": "Pardes Inc.の募集職種、必須スキル・歓迎スキルをご紹介します。"
+    },
+    "hero": {
+      "heading": "採用情報",
+      "body": "自由意志を持つ汎用人工知能（AGI）の実現という、大きな挑戦に加わりませんか。"
+    },
+    "intro": {
+      "heading": "Pardesで働くということ",
+      "body": "誤差逆伝播法に依存しない新しい知能原理の実装という、世界的にも類を見ない研究開発に、初期メンバーとして携わることができます。既にBiNet実装エンジニアが2名参画しており、少人数だからこそ裁量の大きい環境です。"
+    },
+    "positions": {
+      "heading": "募集職種",
+      "items": [
+        {
+          "title": "BiNet実装エンジニア",
+          "body": "CUDA C++やRust等を用いた、BiNetのコア実装・独自OS研究開発に携わります。"
+        },
+        {
+          "title": "クラウド・アプリ開発エンジニア",
+          "body": "BiNet SDK・管理基盤等、クラウド・アプリケーション領域の開発を担当します。"
+        },
+        {
+          "title": "機体開発エンジニア（将来募集）",
+          "body": "将来的なロボット機体開発フェーズに向けた募集です。"
+        }
+      ]
+    },
+    "skills": {
+      "requiredHeading": "必須スキル・環境",
+      "required": [
+        "C++／Pythonの基礎知識",
+        "RTX 40系GPU搭載PCでの開発環境"
+      ],
+      "preferredHeading": "歓迎スキル",
+      "preferred": [
+        "Linux環境での開発経験",
+        "Gitを用いたチーム開発経験",
+        "数学・物理学への強い興味"
+      ]
+    },
+    "cta": {
+      "heading": "応募・カジュアル面談のお問い合わせ",
+      "links": {
+        "contact": "採用について問い合わせる"
+      }
+    }
+  },
+  "news": {
+    "meta": {
+      "title": "お知らせ",
+      "description": "Pardes Inc.からのお知らせ一覧です。"
+    },
+    "hero": {
+      "heading": "お知らせ"
+    },
+    "categories": {
+      "all": "すべて",
+      "milestone": "マイルストーン",
+      "recruit": "採用",
+      "poc": "PoC募集",
+      "media": "メディア掲載"
+    },
+    "list": {
+      "empty": "現在お知らせはありません。",
+      "publishedOn": "公開日：{date}",
+      "updatedOn": "更新日：{date}",
+      "readMore": "詳しく見る"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "お問い合わせ",
+      "description": "PoC相談・採用応募・取材のお問い合わせはこちらから。"
+    },
+    "hero": {
+      "heading": "お問い合わせ",
+      "body": "PoCのご相談、採用へのご応募、取材・メディア関連など、目的を選択のうえご入力ください。"
+    },
+    "form": {
+      "name": "氏名",
+      "company": "会社名・所属",
+      "email": "メールアドレス",
+      "purpose": "お問い合わせ目的",
+      "purposeOptions": {
+        "poc": "PoCパートナー相談",
+        "recruit": "採用応募",
+        "media": "取材・メディア",
+        "other": "その他"
+      },
+      "message": "お問い合わせ内容",
+      "consent": "ご入力いただいた個人情報は、お問い合わせ対応の目的でのみ利用し、対応完了後を含め最大1年間保持したのち削除します。詳しくは",
+      "consentLink": "プライバシーポリシー",
+      "consentSuffix": "をご確認ください。",
+      "submit": "送信する",
+      "submitting": "送信中...",
+      "success": "お問い合わせを受け付けました。担当者より折り返しご連絡いたします。",
+      "error": "送信に失敗しました。時間をおいて再度お試しください。",
+      "errors": {
+        "required": "必須項目です。",
+        "email": "メールアドレスの形式が正しくありません。"
+      }
+    }
+  },
+  "legal": {
+    "privacy": {
+      "meta": {
+        "title": "プライバシーポリシー",
+        "description": "Pardes Inc.のプライバシーポリシーです。"
+      },
+      "heading": "プライバシーポリシー",
+      "intro": "Pardes Inc.（以下「当社」）は、お問い合わせフォームを通じて取得する個人情報を、以下の方針に基づき適切に取り扱います。",
+      "sections": [
+        {
+          "title": "取得する情報",
+          "body": "お問い合わせフォームにご入力いただく氏名、会社名・所属、メールアドレス、お問い合わせ目的、お問い合わせ内容を取得します。"
+        },
+        {
+          "title": "利用目的",
+          "body": "取得した情報は、お問い合わせへの対応、PoCや採用に関するご連絡のためにのみ利用し、目的外利用は行いません。"
+        },
+        {
+          "title": "保管期間",
+          "body": "取得した個人情報は、お問い合わせ対応の目的で最大1年間保持し、期間経過後は速やかに削除します。"
+        },
+        {
+          "title": "第三者提供・委託",
+          "body": "お問い合わせ対応のため、メール配信サービス（Resend）を利用します。スパム対策としてCloudflare Turnstileを利用します。これらのサービスの利用範囲において、必要な情報が各サービス提供者に送信される場合があります。"
+        },
+        {
+          "title": "アクセス解析",
+          "body": "本サイトでは、サービス改善のためGoogle Analytics 4によるアクセス解析を行っています。"
+        },
+        {
+          "title": "開示・削除等のご請求",
+          "body": "ご本人からの個人情報の開示・訂正・削除等のご請求は、お問い合わせフォームよりご連絡ください。"
+        }
+      ]
+    }
+  }
+}
