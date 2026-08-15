@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import ReferenceHomeRuntime from "@/components/home/ReferenceHomeRuntime";
-import ReferenceLangSwitch from "@/components/layout/ReferenceLangSwitch";
-import { readReferencePageBody } from "@/lib/referenceEmbed";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import InteriorHero from "@/components/layout/InteriorHero";
@@ -10,9 +7,6 @@ import NumberedList from "@/components/ui/NumberedList";
 import DeepDiveBlock from "@/components/ui/DeepDiveBlock";
 import CompareTable from "@/components/ui/CompareTable";
 import ArrowLink from "@/components/ui/ArrowLink";
-
-const BODY_CLASS_NAME =
-  "wp-singular page-template-default page wp-embed-responsive wp-theme-matsuo page-service ";
 
 const TIER_LABELS: Record<string, string> = {
   "BiNet SDK": "Developer Kit",
@@ -33,26 +27,6 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
   };
-}
-
-function BusinessReferencePage() {
-  return (
-    <>
-      <ReferenceHomeRuntime bodyClassName={BODY_CLASS_NAME} />
-      <ReferenceLangSwitch />
-      {/*
-        参照HTMLは非標準的なマークアップを含むため、ブラウザのHTMLパーサーが
-        解釈時に文字列を正規化し、SSR時の文字列と厳密には一致しなくなる。
-        表示・動作には影響しないReactの既知の制約のため、
-        dangerouslySetInnerHTML特有のhydration警告はこの要素に限定して抑止する。
-      */}
-      <div
-        className="pardes-reference-home"
-        dangerouslySetInnerHTML={{ __html: readReferencePageBody("business.html") }}
-        suppressHydrationWarning
-      />
-    </>
-  );
 }
 
 async function BusinessInteriorPage() {
@@ -211,9 +185,5 @@ export default async function BusinessPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  if (locale === "en") {
-    return <BusinessInteriorPage />;
-  }
-
-  return <BusinessReferencePage />;
+  return <BusinessInteriorPage />;
 }

@@ -55,13 +55,13 @@ export default function HeroSection({
               {eyebrow}
             </p>
           </Reveal>
-          <h1 className="mt-fluid-xs font-serif-jp text-fluid-3xl font-semibold leading-[1.1] text-fg">
+          <h1 className="mt-fluid-xs font-serif-jp text-[clamp(2.35rem,4.4vw,5rem)] font-semibold leading-[1.22] text-fg sm:leading-[1.16]">
             {headingLines.map((line, i) => (
               <SplitReveal
                 key={i}
                 as="span"
                 text={line}
-                className="block"
+                className="block sm:whitespace-nowrap"
                 staggerMs={22}
                 randomDir
               />
@@ -106,10 +106,10 @@ export default function HeroSection({
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-3xl px-fluid-sm py-fluid-xl">
+      <div className="relative mx-auto max-w-4xl px-fluid-sm py-fluid-xl">
         {narrative.map((paragraph, i) => (
-          <Reveal key={i} delayMs={i * 60} className="mt-fluid-sm first:mt-0">
-            <p className="font-serif-jp-body text-fluid-lg leading-relaxed text-fg-muted">
+          <Reveal key={i} delayMs={i * 60} className="mt-fluid-md first:mt-0">
+            <p className="font-serif-jp-body text-fluid-lg leading-[1.9] text-fg-muted">
               {paragraph}
             </p>
           </Reveal>

@@ -102,16 +102,7 @@ export default async function LocaleLayout({
       className={`${spaceGrotesk.variable} ${shipporiMincho.variable} ${playfairDisplay.variable} ${notoSerifJp.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      {/*
-        ホーム(参照サイト埋め込み)はマウント後にAlpine.jsランタイムと
-        ReferenceHomeRuntimeがhtml/bodyへ直接--vh・--scrollbar-width・
-        x-data等を書き込む。React管理外の想定済みの変更のためhydration
-        warningを抑止する（React公式が推奨するsuppressHydrationWarningの用途）。
-      */}
-      <body
-        className="flex min-h-full flex-col bg-bg text-fg"
-        suppressHydrationWarning
-      >
+      <body className="flex min-h-full flex-col bg-bg text-fg">
         <NextIntlClientProvider locale={locale}>
           <JsonLd data={buildOrganizationJsonLd(locale)} />
           {children}

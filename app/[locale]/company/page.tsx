@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import ReferenceHomeRuntime from "@/components/home/ReferenceHomeRuntime";
-import ReferenceLangSwitch from "@/components/layout/ReferenceLangSwitch";
-import { readReferencePageBody } from "@/lib/referenceEmbed";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import InteriorHero from "@/components/layout/InteriorHero";
 import ArrowLink from "@/components/ui/ArrowLink";
-
-const BODY_CLASS_NAME =
-  "wp-singular page-template-default page wp-embed-responsive wp-theme-matsuo page-company ";
 
 const BASIC_INFO_ROWS = [
   { labelKey: "companyName", valueKey: "companyNameValue" },
@@ -34,26 +28,6 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
   };
-}
-
-function CompanyReferencePage() {
-  return (
-    <>
-      <ReferenceHomeRuntime bodyClassName={BODY_CLASS_NAME} />
-      <ReferenceLangSwitch />
-      {/*
-        参照HTMLは非標準的なマークアップを含むため、ブラウザのHTMLパーサーが
-        解釈時に文字列を正規化し、SSR時の文字列と厳密には一致しなくなる。
-        表示・動作には影響しないReactの既知の制約のため、
-        dangerouslySetInnerHTML特有のhydration警告はこの要素に限定して抑止する。
-      */}
-      <div
-        className="pardes-reference-home"
-        dangerouslySetInnerHTML={{ __html: readReferencePageBody("company.html") }}
-        suppressHydrationWarning
-      />
-    </>
-  );
 }
 
 async function CompanyInteriorPage() {
@@ -159,9 +133,5 @@ export default async function CompanyPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  if (locale === "en") {
-    return <CompanyInteriorPage />;
-  }
-
-  return <CompanyReferencePage />;
+  return <CompanyInteriorPage />;
 }
